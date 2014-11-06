@@ -129,6 +129,21 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ConjInstrHasInicioPrograma -->
+          <xsd:element name="inicioPrograma" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of ConjInstrHasInicioPrograma</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="conjInstrHasInicioPrograma" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ConjInstrHasInicioPrograma needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
           <!-- Relationship: ConjInstrHasInstruccion -->
           <xsd:element name="instruccion" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
@@ -139,36 +154,6 @@
                 <xsd:element ref="conjInstrHasInstruccion" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ConjInstrHasInstruccion needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ProgramaReferencesInstruccionInicial -->
-          <xsd:element name="instruccionInicial" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instance of ProgramaReferencesInstruccionInicial</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="programaReferencesInstruccionInicial" minOccurs="1" maxOccurs="1">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ProgramaReferencesInstruccionInicial needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ProgramaReferencesInstruccionFinal -->
-          <xsd:element name="instruccionFinal" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instance of ProgramaReferencesInstruccionFinal</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="programaReferencesInstruccionFinal" minOccurs="1" maxOccurs="1">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ProgramaReferencesInstruccionFinal needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -202,22 +187,22 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Instruccion -->
-  <xsd:element name="instruccion" abstract="true" type="Instruccion" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="Instruccion" abstract="true" >
+  <!-- InstruccionIntermedias -->
+  <xsd:element name="instruccionIntermedias" abstract="true" type="InstruccionIntermedias" substitutionGroup="instruccion" />
+  <xsd:complexType name="InstruccionIntermedias" abstract="true" >
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="Instruccion">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: InstruccionReferencessiguiente -->
-          <xsd:element name="siguiente" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: InstruccionIntermediasReferencesInstruccion -->
+          <xsd:element name="instruccion" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of InstruccionReferencessiguiente</xsd:documentation>
+              <xsd:documentation>Instance of InstruccionIntermediasReferencesInstruccion</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="instruccionReferencessiguiente" minOccurs="0" maxOccurs="1">
+                <xsd:element ref="instruccionIntermediasReferencesInstruccion" minOccurs="0" maxOccurs="1">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of InstruccionReferencessiguiente needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of InstruccionIntermediasReferencesInstruccion needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -234,28 +219,23 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Instruccion Moniker -->
-  <xsd:element name="instruccionMoniker" abstract="true" type="InstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="InstruccionMoniker">
+  <!-- InstruccionIntermedias Moniker -->
+  <xsd:element name="instruccionIntermediasMoniker" abstract="true" type="InstruccionIntermediasMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:complexType name="InstruccionIntermediasMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for Instruccion instance.</xsd:documentation>
+      <xsd:documentation>Moniker for InstruccionIntermedias instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="InstruccionMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- InsRepetir -->
-  <xsd:element name="insRepetir" type="InsRepetir" substitutionGroup="instruccion" />
+  <xsd:element name="insRepetir" type="InsRepetir" substitutionGroup="instruccionIntermedias" />
   <xsd:complexType name="InsRepetir">
     <xsd:complexContent>
-      <xsd:extension base="Instruccion">
+      <xsd:extension base="InstruccionIntermedias">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: InsRepetirReferencesSubprograma -->
           <xsd:element name="subprograma" minOccurs="1" maxOccurs="1">
@@ -284,22 +264,22 @@
   </xsd:complexType>
   
   <!-- InsRepetir Moniker -->
-  <xsd:element name="insRepetirMoniker" type="InsRepetirMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:element name="insRepetirMoniker" type="InsRepetirMoniker" substitutionGroup="instruccionIntermediasMoniker" />
   <xsd:complexType name="InsRepetirMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for InsRepetir instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="InstruccionMoniker">
+      <xsd:extension base="InstruccionIntermediasMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- InsFijar -->
-  <xsd:element name="insFijar" type="InsFijar" substitutionGroup="instruccion" />
+  <xsd:element name="insFijar" type="InsFijar" substitutionGroup="instruccionIntermedias" />
   <xsd:complexType name="InsFijar">
     <xsd:complexContent>
-      <xsd:extension base="Instruccion">
+      <xsd:extension base="InstruccionIntermedias">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -311,22 +291,22 @@
   </xsd:complexType>
   
   <!-- InsFijar Moniker -->
-  <xsd:element name="insFijarMoniker" type="InsFijarMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:element name="insFijarMoniker" type="InsFijarMoniker" substitutionGroup="instruccionIntermediasMoniker" />
   <xsd:complexType name="InsFijarMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for InsFijar instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="InstruccionMoniker">
+      <xsd:extension base="InstruccionIntermediasMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- InsApuntar -->
-  <xsd:element name="insApuntar" type="InsApuntar" substitutionGroup="instruccion" />
+  <xsd:element name="insApuntar" type="InsApuntar" substitutionGroup="instruccionIntermedias" />
   <xsd:complexType name="InsApuntar">
     <xsd:complexContent>
-      <xsd:extension base="Instruccion">
+      <xsd:extension base="InstruccionIntermedias">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -338,22 +318,22 @@
   </xsd:complexType>
   
   <!-- InsApuntar Moniker -->
-  <xsd:element name="insApuntarMoniker" type="InsApuntarMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:element name="insApuntarMoniker" type="InsApuntarMoniker" substitutionGroup="instruccionIntermediasMoniker" />
   <xsd:complexType name="InsApuntarMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for InsApuntar instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="InstruccionMoniker">
+      <xsd:extension base="InstruccionIntermediasMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- InsPosicion -->
-  <xsd:element name="insPosicion" type="InsPosicion" substitutionGroup="instruccion" />
+  <xsd:element name="insPosicion" type="InsPosicion" substitutionGroup="instruccionIntermedias" />
   <xsd:complexType name="InsPosicion">
     <xsd:complexContent>
-      <xsd:extension base="Instruccion">
+      <xsd:extension base="InstruccionIntermedias">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -365,22 +345,22 @@
   </xsd:complexType>
   
   <!-- InsPosicion Moniker -->
-  <xsd:element name="insPosicionMoniker" type="InsPosicionMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:element name="insPosicionMoniker" type="InsPosicionMoniker" substitutionGroup="instruccionIntermediasMoniker" />
   <xsd:complexType name="InsPosicionMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for InsPosicion instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="InstruccionMoniker">
+      <xsd:extension base="InstruccionIntermediasMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- InsMover -->
-  <xsd:element name="insMover" type="InsMover" substitutionGroup="instruccion" />
+  <xsd:element name="insMover" type="InsMover" substitutionGroup="instruccionIntermedias" />
   <xsd:complexType name="InsMover">
     <xsd:complexContent>
-      <xsd:extension base="Instruccion">
+      <xsd:extension base="InstruccionIntermedias">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -392,13 +372,13 @@
   </xsd:complexType>
   
   <!-- InsMover Moniker -->
-  <xsd:element name="insMoverMoniker" type="InsMoverMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:element name="insMoverMoniker" type="InsMoverMoniker" substitutionGroup="instruccionIntermediasMoniker" />
   <xsd:complexType name="InsMoverMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for InsMover instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="InstruccionMoniker">
+      <xsd:extension base="InstruccionIntermediasMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -457,6 +437,114 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- Instruccion -->
+  <xsd:element name="instruccion" abstract="true" type="Instruccion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Instruccion" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Instruccion Moniker -->
+  <xsd:element name="instruccionMoniker" abstract="true" type="InstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="InstruccionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Instruccion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InsFin -->
+  <xsd:element name="insFin" type="InsFin" substitutionGroup="instruccion" />
+  <xsd:complexType name="InsFin">
+    <xsd:complexContent>
+      <xsd:extension base="Instruccion">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InsFin Moniker -->
+  <xsd:element name="insFinMoniker" type="InsFinMoniker" substitutionGroup="instruccionMoniker" />
+  <xsd:complexType name="InsFinMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InsFin instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="InstruccionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InicioPrograma -->
+  <xsd:element name="inicioPrograma" type="InicioPrograma" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="InicioPrograma">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: InicioProgramaReferencesInstruccion -->
+          <xsd:element name="instruccion" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of InicioProgramaReferencesInstruccion</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="inicioProgramaReferencesInstruccion" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of InicioProgramaReferencesInstruccion needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InicioPrograma Moniker -->
+  <xsd:element name="inicioProgramaMoniker" type="InicioProgramaMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="InicioProgramaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InicioPrograma instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- AplicacionIPKHasImagen -->
   <xsd:element name="aplicacionIPKHasImagen" type="AplicacionIPKHasImagen" substitutionGroup="core:modelElement" />
   <xsd:complexType name="AplicacionIPKHasImagen">
@@ -485,166 +573,6 @@
   <xsd:complexType name="AplicacionIPKHasImagenMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AplicacionIPKHasImagen instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ConjInstrHasInstruccion -->
-  <xsd:element name="conjInstrHasInstruccion" type="ConjInstrHasInstruccion" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ConjInstrHasInstruccion">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Instruccion -->
-          <xsd:element ref="instruccion" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ConjInstrHasInstruccion Moniker -->
-  <xsd:element name="conjInstrHasInstruccionMoniker" type="ConjInstrHasInstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ConjInstrHasInstruccionMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ConjInstrHasInstruccion instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ProgramaReferencesInstruccionInicial -->
-  <xsd:element name="programaReferencesInstruccionInicial" type="ProgramaReferencesInstruccionInicial" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ProgramaReferencesInstruccionInicial">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Instruccion -->
-          <xsd:element ref="instruccionMoniker" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ProgramaReferencesInstruccionInicial Moniker -->
-  <xsd:element name="programaReferencesInstruccionInicialMoniker" type="ProgramaReferencesInstruccionInicialMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ProgramaReferencesInstruccionInicialMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ProgramaReferencesInstruccionInicial instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ProgramaReferencesInstruccionFinal -->
-  <xsd:element name="programaReferencesInstruccionFinal" type="ProgramaReferencesInstruccionFinal" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ProgramaReferencesInstruccionFinal">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Instruccion -->
-          <xsd:element ref="instruccionMoniker" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ProgramaReferencesInstruccionFinal Moniker -->
-  <xsd:element name="programaReferencesInstruccionFinalMoniker" type="ProgramaReferencesInstruccionFinalMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ProgramaReferencesInstruccionFinalMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ProgramaReferencesInstruccionFinal instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- InstruccionReferencessiguiente -->
-  <xsd:element name="instruccionReferencessiguiente" type="InstruccionReferencessiguiente" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="InstruccionReferencessiguiente">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Instruccion -->
-          <xsd:element ref="instruccionMoniker" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- InstruccionReferencessiguiente Moniker -->
-  <xsd:element name="instruccionReferencessiguienteMoniker" type="InstruccionReferencessiguienteMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="InstruccionReferencessiguienteMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for InstruccionReferencessiguiente instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -776,6 +704,176 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  
+  <!-- InstruccionIntermediasReferencesInstruccion -->
+  <xsd:element name="instruccionIntermediasReferencesInstruccion" type="InstruccionIntermediasReferencesInstruccion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="InstruccionIntermediasReferencesInstruccion">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Instruccion -->
+          <xsd:element ref="instruccionMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InstruccionIntermediasReferencesInstruccion Moniker -->
+  <xsd:element name="instruccionIntermediasReferencesInstruccionMoniker" type="InstruccionIntermediasReferencesInstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="InstruccionIntermediasReferencesInstruccionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InstruccionIntermediasReferencesInstruccion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ConjInstrHasInicioPrograma -->
+  <xsd:element name="conjInstrHasInicioPrograma" type="ConjInstrHasInicioPrograma" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ConjInstrHasInicioPrograma">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end InicioPrograma -->
+          <xsd:element ref="inicioPrograma" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ConjInstrHasInicioPrograma Moniker -->
+  <xsd:element name="conjInstrHasInicioProgramaMoniker" type="ConjInstrHasInicioProgramaMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConjInstrHasInicioProgramaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ConjInstrHasInicioPrograma instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ConjInstrHasInstruccion -->
+  <xsd:element name="conjInstrHasInstruccion" type="ConjInstrHasInstruccion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ConjInstrHasInstruccion">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Instruccion -->
+          <xsd:element ref="instruccion" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ConjInstrHasInstruccion Moniker -->
+  <xsd:element name="conjInstrHasInstruccionMoniker" type="ConjInstrHasInstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConjInstrHasInstruccionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ConjInstrHasInstruccion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InicioProgramaReferencesInstruccion -->
+  <xsd:element name="inicioProgramaReferencesInstruccion" type="InicioProgramaReferencesInstruccion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="InicioProgramaReferencesInstruccion">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Instruccion -->
+          <xsd:element ref="instruccionMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InicioProgramaReferencesInstruccion Moniker -->
+  <xsd:element name="inicioProgramaReferencesInstruccionMoniker" type="InicioProgramaReferencesInstruccionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="InicioProgramaReferencesInstruccionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InicioProgramaReferencesInstruccion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum PosicionEnum -->
+  <xsd:simpleType name="PosicionEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Norte"/>
+      <xsd:enumeration value="Sur"/>
+      <xsd:enumeration value="Este"/>
+      <xsd:enumeration value="Oeste"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   
 </xsd:schema>
 

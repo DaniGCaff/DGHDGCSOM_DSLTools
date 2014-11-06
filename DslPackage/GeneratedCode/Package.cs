@@ -65,20 +65,6 @@ namespace CE.DGH_DGC_SOM_IKP
 					"@FijarToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
 					0xff00ff)]
 	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
-					"@InicialToolToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
-					"CE.DGH_DGC_SOM_IKP.InicialToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"", 
-					"@InicialToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
-					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
-					"@FinalToolToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
-					"CE.DGH_DGC_SOM_IKP.FinalToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"FinalTool", 
-					"@FinalToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
-					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
 					"@OrdenToolToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
 					"CE.DGH_DGC_SOM_IKP.OrdenToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
@@ -119,6 +105,27 @@ namespace CE.DGH_DGC_SOM_IKP
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"SubprogramaTool", 
 					"@SubprogramaToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
+					"@InicioToolToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					"CE.DGH_DGC_SOM_IKP.InicioToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"InicioTool", 
+					"@InicioToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
+					"@FinToolToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					"CE.DGH_DGC_SOM_IKP.FinToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"FinTool", 
+					"@FinToolToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					0xff00ff)]
+	[VSShell::ProvideStaticToolboxItem("CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab",
+					"@PrimeraInstruccionToolboxItem;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
+					"CE.DGH_DGC_SOM_IKP.PrimeraInstruccionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"PrimeraInstruccion", 
+					"@PrimeraInstruccionToolboxBitmap;CE.DGH_DGC_SOM_IKP.Dsl.dll", 
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(DGH_DGC_SOM_IKPEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DGH_DGC_SOM_IKPEditorFactory), "." + Constants.DesignerFileExtension, 50)]

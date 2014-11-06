@@ -26,6 +26,14 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
+            <DomainClassMoniker Name="InicioPrograma" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ConjInstrHasInicioPrograma.InicioPrograma</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
             <DomainClassMoniker Name="Instruccion" />
           </Index>
           <LinkCreationPaths>
@@ -34,30 +42,34 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="96ae80fb-9d84-476f-94c8-b759c045c0f1" Description="Description for CE.DGH_DGC_SOM_IKP.Instruccion" Name="Instruccion" DisplayName="Instruccion" InheritanceModifier="Abstract" Namespace="CE.DGH_DGC_SOM_IKP" />
-    <DomainClass Id="1324cdaf-c38b-4d17-bcfa-ce696cb737ca" Description="Description for CE.DGH_DGC_SOM_IKP.InsRepetir" Name="InsRepetir" DisplayName="Ins Repetir" Namespace="CE.DGH_DGC_SOM_IKP">
+    <DomainClass Id="96ae80fb-9d84-476f-94c8-b759c045c0f1" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermedias" Name="InstruccionIntermedias" DisplayName="Instruccion Intermedias" InheritanceModifier="Abstract" Namespace="CE.DGH_DGC_SOM_IKP">
       <BaseClass>
         <DomainClassMoniker Name="Instruccion" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="1324cdaf-c38b-4d17-bcfa-ce696cb737ca" Description="Description for CE.DGH_DGC_SOM_IKP.InsRepetir" Name="InsRepetir" DisplayName="Ins Repetir" Namespace="CE.DGH_DGC_SOM_IKP">
+      <BaseClass>
+        <DomainClassMoniker Name="InstruccionIntermedias" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="80346f3c-37cb-4bcd-b25a-37df08dd1490" Description="Description for CE.DGH_DGC_SOM_IKP.InsFijar" Name="InsFijar" DisplayName="Ins Fijar" Namespace="CE.DGH_DGC_SOM_IKP">
       <BaseClass>
-        <DomainClassMoniker Name="Instruccion" />
+        <DomainClassMoniker Name="InstruccionIntermedias" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="aaaaa2d7-a07d-4123-8187-f628f669caf8" Description="Description for CE.DGH_DGC_SOM_IKP.InsApuntar" Name="InsApuntar" DisplayName="Ins Apuntar" Namespace="CE.DGH_DGC_SOM_IKP">
       <BaseClass>
-        <DomainClassMoniker Name="Instruccion" />
+        <DomainClassMoniker Name="InstruccionIntermedias" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="aa1d0fad-521e-4975-bf96-f2dbf2f77c12" Description="Description for CE.DGH_DGC_SOM_IKP.InsPosicion" Name="InsPosicion" DisplayName="Ins Posicion" Namespace="CE.DGH_DGC_SOM_IKP">
       <BaseClass>
-        <DomainClassMoniker Name="Instruccion" />
+        <DomainClassMoniker Name="InstruccionIntermedias" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="a063983b-ffdb-440c-9d1a-488b9b864246" Description="Description for CE.DGH_DGC_SOM_IKP.InsMover" Name="InsMover" DisplayName="Ins Mover" Namespace="CE.DGH_DGC_SOM_IKP">
       <BaseClass>
-        <DomainClassMoniker Name="Instruccion" />
+        <DomainClassMoniker Name="InstruccionIntermedias" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="05cfd294-05e0-42f0-ad83-b7ecf9b484b5" Description="Description for CE.DGH_DGC_SOM_IKP.Programa" Name="Programa" DisplayName="Programa" Namespace="CE.DGH_DGC_SOM_IKP">
@@ -70,6 +82,13 @@
         <DomainClassMoniker Name="ConjInstr" />
       </BaseClass>
     </DomainClass>
+    <DomainClass Id="238e12e6-1d12-4587-b0a8-ded51217ee01" Description="Description for CE.DGH_DGC_SOM_IKP.Instruccion" Name="Instruccion" DisplayName="Instruccion" InheritanceModifier="Abstract" Namespace="CE.DGH_DGC_SOM_IKP" />
+    <DomainClass Id="40696572-d068-40fc-b225-f81d0567cb4d" Description="Description for CE.DGH_DGC_SOM_IKP.InsFin" Name="InsFin" DisplayName="Ins Fin" Namespace="CE.DGH_DGC_SOM_IKP">
+      <BaseClass>
+        <DomainClassMoniker Name="Instruccion" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="ac6431ff-9ca9-4045-ab33-c413ab33a781" Description="Description for CE.DGH_DGC_SOM_IKP.InicioPrograma" Name="InicioPrograma" DisplayName="Inicio Programa" Namespace="CE.DGH_DGC_SOM_IKP" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="1010c907-a9d8-46d1-8652-8ee03a99211e" Description="Description for CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen" Name="AplicacionIPKHasImagen" DisplayName="Aplicacion IPKHas Imagen" Namespace="CE.DGH_DGC_SOM_IKP" IsEmbedding="true">
@@ -84,70 +103,6 @@
         <DomainRole Id="7dfe0cc9-103e-4c9e-9123-2d08a9d3268b" Description="Description for CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen.Imagen" Name="Imagen" DisplayName="Imagen" PropertyName="AplicacionIPK" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Aplicacion IPK">
           <RolePlayer>
             <DomainClassMoniker Name="Imagen" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="85fa269b-5eb1-4e04-aa42-421f8d3acd22" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion" Name="ConjInstrHasInstruccion" DisplayName="Conj Instr Has Instruccion" Namespace="CE.DGH_DGC_SOM_IKP" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="c1697f7d-4ea1-4dbb-8654-a5ebf93c7091" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr" Name="ConjInstr" DisplayName="Conj Instr" PropertyName="Instruccion" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Instruccion">
-          <RolePlayer>
-            <DomainClassMoniker Name="ConjInstr" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="da6e10ad-8c38-47a7-a6d9-a500ac7d60db" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="ConjInstr" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Conj Instr">
-          <RolePlayer>
-            <DomainClassMoniker Name="Instruccion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="ff42f1f1-39a4-4af7-9423-7672fa7b1a2d" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial" Name="ProgramaReferencesInstruccionInicial" DisplayName="Programa References Instruccion Inicial" Namespace="CE.DGH_DGC_SOM_IKP">
-      <Source>
-        <DomainRole Id="27553de1-4b1a-4ced-ad81-17328c349b94" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstr" Name="ConjInstr" DisplayName="Conj Instr" PropertyName="InstruccionInicial" Multiplicity="One" PropertyDisplayName="Instruccion Inicial">
-          <RolePlayer>
-            <DomainClassMoniker Name="ConjInstr" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="24a373c3-f2ec-4c47-8d82-91bb32258647" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="ProgramaA" Multiplicity="ZeroOne" PropertyDisplayName="Programa A">
-          <RolePlayer>
-            <DomainClassMoniker Name="Instruccion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="faa9fb73-b24a-4829-a5b3-a7cb7f1175b3" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal" Name="ProgramaReferencesInstruccionFinal" DisplayName="Programa References Instruccion Final" Namespace="CE.DGH_DGC_SOM_IKP">
-      <Source>
-        <DomainRole Id="bac43b96-40f2-4ad4-982b-85d5d48d6717" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstr" Name="ConjInstr" DisplayName="Conj Instr" PropertyName="InstruccionFinal" Multiplicity="One" PropertyDisplayName="Instruccion Final">
-          <RolePlayer>
-            <DomainClassMoniker Name="ConjInstr" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="32ff2563-79b8-4089-8517-e7b8de6853d5" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="ProgramaB" Multiplicity="ZeroOne" PropertyDisplayName="Programa B">
-          <RolePlayer>
-            <DomainClassMoniker Name="Instruccion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="c3481972-5ae6-4069-9651-17b38b9ed74a" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente" Name="InstruccionReferencessiguiente" DisplayName="Instruccion Referencessiguiente" Namespace="CE.DGH_DGC_SOM_IKP">
-      <Source>
-        <DomainRole Id="f01783b4-46d3-4277-958a-cb333053830b" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccion" Name="SourceInstruccion" DisplayName="Source Instruccion" PropertyName="siguiente" Multiplicity="ZeroOne" PropertyDisplayName="Siguiente">
-          <RolePlayer>
-            <DomainClassMoniker Name="Instruccion" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="5bc8bef5-7760-4dc6-9528-06e98177fe52" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccion" Name="TargetInstruccion" DisplayName="Target Instruccion" PropertyName="anterior" Multiplicity="ZeroOne" PropertyDisplayName="Anterior">
-          <RolePlayer>
-            <DomainClassMoniker Name="Instruccion" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -200,6 +155,70 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="05582f71-e767-4a45-8c34-3487c498822d" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion" Name="InstruccionIntermediasReferencesInstruccion" DisplayName="Instruccion Intermedias References Instruccion" Namespace="CE.DGH_DGC_SOM_IKP">
+      <Source>
+        <DomainRole Id="d52b8078-2828-4731-8604-2ac94d8d09a0" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermedias" Name="InstruccionIntermedias" DisplayName="Instruccion Intermedias" PropertyName="Instruccion" Multiplicity="ZeroOne" PropertyDisplayName="Instruccion">
+          <RolePlayer>
+            <DomainClassMoniker Name="InstruccionIntermedias" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="130bf16b-0d40-405a-9c96-4da1f10cb7e0" Description="Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="InstruccionIntermedias" Multiplicity="ZeroOne" PropertyDisplayName="Instruccion Intermedias">
+          <RolePlayer>
+            <DomainClassMoniker Name="Instruccion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="25ca2e86-0679-4f35-9d01-535d3fa013b0" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma" Name="ConjInstrHasInicioPrograma" DisplayName="Conj Instr Has Inicio Programa" Namespace="CE.DGH_DGC_SOM_IKP" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="80f51714-c7da-4e78-9e40-b41b86f2f2c8" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstr" Name="ConjInstr" DisplayName="Conj Instr" PropertyName="InicioPrograma" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Inicio Programa">
+          <RolePlayer>
+            <DomainClassMoniker Name="ConjInstr" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="f29e4215-3d4e-4f81-92da-2a3aa208c3b2" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioPrograma" Name="InicioPrograma" DisplayName="Inicio Programa" PropertyName="ConjInstr" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Conj Instr">
+          <RolePlayer>
+            <DomainClassMoniker Name="InicioPrograma" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="b5d44492-49a8-4a97-9aa7-0c55c91c5350" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion" Name="ConjInstrHasInstruccion" DisplayName="Conj Instr Has Instruccion" Namespace="CE.DGH_DGC_SOM_IKP" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="a1b635c5-ad8e-4a75-9ec0-50a5d30a6c51" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr" Name="ConjInstr" DisplayName="Conj Instr" PropertyName="Instruccion" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Instruccion">
+          <RolePlayer>
+            <DomainClassMoniker Name="ConjInstr" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="aa3c8688-a210-4d20-b5e3-77d078f6ec40" Description="Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="ConjInstr" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Conj Instr">
+          <RolePlayer>
+            <DomainClassMoniker Name="Instruccion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="c163744b-253f-43a1-af13-6ed550543714" Description="Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion" Name="InicioProgramaReferencesInstruccion" DisplayName="Inicio Programa References Instruccion" Namespace="CE.DGH_DGC_SOM_IKP">
+      <Source>
+        <DomainRole Id="bda656a8-c59e-4dca-a2b4-2e62cc7a6f5c" Description="Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioPrograma" Name="InicioPrograma" DisplayName="Inicio Programa" PropertyName="Instruccion" Multiplicity="ZeroOne" PropertyDisplayName="Instruccion">
+          <RolePlayer>
+            <DomainClassMoniker Name="InicioPrograma" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="9523f804-2d37-4e89-9d04-a2b7b905440b" Description="Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Instruccion" Name="Instruccion" DisplayName="Instruccion" PropertyName="InicioPrograma" Multiplicity="One" PropertyDisplayName="Inicio Programa">
+          <RolePlayer>
+            <DomainClassMoniker Name="Instruccion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -217,36 +236,104 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
+    <DomainEnumeration Name="PosicionEnum" Namespace="CE.DGH_DGC_SOM_IKP" Description="Description for CE.DGH_DGC_SOM_IKP.PosicionEnum">
+      <Literals>
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Norte" Name="Norte" Value="" />
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Sur" Name="Sur" Value="" />
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Este" Name="Este" Value="" />
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Oeste" Name="Oeste" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Personaje" Namespace="CE.DGH_DGC_SOM_IKP" Description="Description for CE.DGH_DGC_SOM_IKP.Personaje">
+      <Literals>
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.Personaje.Collie" Name="Collie" Value="">
+          <Notes>\Resources\Collie.png</Notes>
+        </EnumerationLiteral>
+        <EnumerationLiteral Description="Description for CE.DGH_DGC_SOM_IKP.Personaje.Labrador" Name="Labrador" Value="">
+          <Notes>\Resources\Labrador.png</Notes>
+        </EnumerationLiteral>
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
-    <ImageShape Id="676c5cc1-f21c-4eac-8134-8b9cf4dd889d" Description="Description for CE.DGH_DGC_SOM_IKP.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Image Shape1" InitialHeight="1" Image="Resources\collie.png" />
+    <ImageShape Id="676c5cc1-f21c-4eac-8134-8b9cf4dd889d" Description="Description for CE.DGH_DGC_SOM_IKP.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Image Shape1" InitialHeight="1" Image="Resources\collie.png">
+      <Properties>
+        <DomainProperty Id="f8782dc5-1449-41d5-9f74-ab1a534f7b11" Description="Description for CE.DGH_DGC_SOM_IKP.ImageShape1.Disfraz" Name="Disfraz" DisplayName="Disfraz">
+          <Type>
+            <DomainEnumerationMoniker Name="Personaje" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </ImageShape>
     <GeometryShape Id="2e88af77-6a65-416a-80e2-741882eb67f7" Description="Description for CE.DGH_DGC_SOM_IKP.InsFijarG" Name="InsFijarG" DisplayName="Ins Fijar G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Fijar G" InitialHeight="1" Geometry="Rectangle">
+      <Properties>
+        <DomainProperty Id="0fd023c4-cfd3-43f4-8f0b-210da61d3a7f" Description="Description for CE.DGH_DGC_SOM_IKP.InsFijarG.Porcentaje" Name="Porcentaje" DisplayName="Porcentaje">
+          <Type>
+            <ExternalTypeMoniker Name="/System/UInt16" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Fijar" DisplayName="Fijar tamaño " DefaultText="Fijar" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="0d99c67b-3dcb-4662-866d-e06de611987a" Description="Description for CE.DGH_DGC_SOM_IKP.InsApuntarG" Name="InsApuntarG" DisplayName="Ins Apuntar G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Apuntar G" InitialHeight="1" Geometry="Rectangle">
+      <Properties>
+        <DomainProperty Id="a227b4b1-5252-431b-84d6-732c6df2a197" Description="Description for CE.DGH_DGC_SOM_IKP.InsApuntarG.Direccion" Name="Direccion" DisplayName="Direccion">
+          <Type>
+            <DomainEnumerationMoniker Name="PosicionEnum" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Apuntar" DisplayName="Apuntar en direccion" DefaultText="Apuntar" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="be261656-d8d1-485c-96d7-73048a7b0a12" Description="Description for CE.DGH_DGC_SOM_IKP.InsRepetirG" Name="InsRepetirG" DisplayName="Ins Repetir G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Repetir G" InitialHeight="1" Geometry="Rectangle">
+      <Properties>
+        <DomainProperty Id="ab0a5d3a-cff5-4d58-b301-7af3d4c9447e" Description="Description for CE.DGH_DGC_SOM_IKP.InsRepetirG.Veces" Name="Veces" DisplayName="Veces">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int32" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Repetir" DisplayName="Repetir" DefaultText="Repetir" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="40c697ae-22f1-4a4a-be43-b32014a03c1d" Description="Description for CE.DGH_DGC_SOM_IKP.ProgramaG" Name="ProgramaG" DisplayName="Programa G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Programa G" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="29a9fd9f-8501-4742-affa-bf3364dd7ab3" Description="Description for CE.DGH_DGC_SOM_IKP.InsPosicionG" Name="InsPosicionG" DisplayName="Ins Posicion G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Posicion G" InitialHeight="1" Geometry="Rectangle">
+      <Properties>
+        <DomainProperty Id="d6c826ca-5d99-499f-802e-2acb2b5d324f" Description="Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.X" Name="X" DisplayName="X">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7c3bb4fb-6425-466a-bdda-02dd71ec0bce" Description="Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.Y" Name="Y" DisplayName="Y">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Ir a posicion" DisplayName="Ir a posicion" DefaultText="Ir a posicion" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="35784762-6e26-4742-a10a-0f5f014ae38e" Description="Description for CE.DGH_DGC_SOM_IKP.InsMoverG" Name="InsMoverG" DisplayName="Ins Mover G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Mover G" InitialHeight="1" Geometry="Rectangle">
+      <Properties>
+        <DomainProperty Id="25474229-3f2c-4c99-b64c-26029150d3da" Description="Description for CE.DGH_DGC_SOM_IKP.InsMoverG.Pasos" Name="Pasos" DisplayName="Pasos">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int32" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mover pasos" DisplayName="Mover pasos" DefaultText="Mover pasos" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="66f95156-78b2-46b4-ba6e-a748f230f96b" Description="Description for CE.DGH_DGC_SOM_IKP.SubprogramaG" Name="SubprogramaG" DisplayName="Subprograma G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Subprograma G" FillColor="Gainsboro" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="fd96b5f0-2321-40f3-a366-ee42f00126eb" Description="Description for CE.DGH_DGC_SOM_IKP.InicioG" Name="InicioG" DisplayName="Inicio G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Inicio G" FillColor="LawnGreen" InitialHeight="1" Geometry="Circle" />
+    <GeometryShape Id="fbe8feca-2763-49cf-b498-f1092cf0826d" Description="Description for CE.DGH_DGC_SOM_IKP.FinG" Name="FinG" DisplayName="Fin G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Fin G" FillColor="Red" InitialHeight="1" Geometry="Circle" />
   </Shapes>
   <Connectors>
     <Connector Id="d7b370c1-9397-4248-8ecc-dd645e35bf86" Description="Description for CE.DGH_DGC_SOM_IKP.InicialG" Name="InicialG" DisplayName="Inicial G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Inicial G" Color="Chartreuse" TargetEndStyle="FilledArrow" />
@@ -282,14 +369,11 @@
       <XmlClassData TypeName="ConjInstr" MonikerAttributeName="" SerializeId="true" MonikerElementName="conjInstrMoniker" ElementName="conjInstr" MonikerTypeName="ConjInstrMoniker">
         <DomainClassMoniker Name="ConjInstr" />
         <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="inicioPrograma">
+            <DomainRelationshipMoniker Name="ConjInstrHasInicioPrograma" />
+          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="instruccion">
             <DomainRelationshipMoniker Name="ConjInstrHasInstruccion" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="instruccionInicial">
-            <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionInicial" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="instruccionFinal">
-            <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionFinal" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -298,12 +382,17 @@
       </XmlClassData>
       <XmlClassData TypeName="ImageShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="imageShape1Moniker" ElementName="imageShape1" MonikerTypeName="ImageShape1Moniker">
         <ImageShapeMoniker Name="ImageShape1" />
-      </XmlClassData>
-      <XmlClassData TypeName="Instruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="instruccionMoniker" ElementName="instruccion" MonikerTypeName="InstruccionMoniker">
-        <DomainClassMoniker Name="Instruccion" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="siguiente">
-            <DomainRelationshipMoniker Name="InstruccionReferencessiguiente" />
+          <XmlPropertyData XmlName="disfraz">
+            <DomainPropertyMoniker Name="ImageShape1/Disfraz" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="InstruccionIntermedias" MonikerAttributeName="" SerializeId="true" MonikerElementName="instruccionIntermediasMoniker" ElementName="instruccionIntermedias" MonikerTypeName="InstruccionIntermediasMoniker">
+        <DomainClassMoniker Name="InstruccionIntermedias" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="instruccion">
+            <DomainRelationshipMoniker Name="InstruccionIntermediasReferencesInstruccion" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -323,21 +412,27 @@
       </XmlClassData>
       <XmlClassData TypeName="InsFijarG" MonikerAttributeName="" SerializeId="true" MonikerElementName="insFijarGMoniker" ElementName="insFijarG" MonikerTypeName="InsFijarGMoniker">
         <GeometryShapeMoniker Name="InsFijarG" />
+        <ElementData>
+          <XmlPropertyData XmlName="porcentaje">
+            <DomainPropertyMoniker Name="InsFijarG/Porcentaje" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="InsApuntarG" MonikerAttributeName="" SerializeId="true" MonikerElementName="insApuntarGMoniker" ElementName="insApuntarG" MonikerTypeName="InsApuntarGMoniker">
         <GeometryShapeMoniker Name="InsApuntarG" />
+        <ElementData>
+          <XmlPropertyData XmlName="direccion">
+            <DomainPropertyMoniker Name="InsApuntarG/Direccion" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="InsRepetirG" MonikerAttributeName="" SerializeId="true" MonikerElementName="insRepetirGMoniker" ElementName="insRepetirG" MonikerTypeName="InsRepetirGMoniker">
         <GeometryShapeMoniker Name="InsRepetirG" />
-      </XmlClassData>
-      <XmlClassData TypeName="ConjInstrHasInstruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conjInstrHasInstruccionMoniker" ElementName="conjInstrHasInstruccion" MonikerTypeName="ConjInstrHasInstruccionMoniker">
-        <DomainRelationshipMoniker Name="ConjInstrHasInstruccion" />
-      </XmlClassData>
-      <XmlClassData TypeName="ProgramaReferencesInstruccionInicial" MonikerAttributeName="" SerializeId="true" MonikerElementName="programaReferencesInstruccionInicialMoniker" ElementName="programaReferencesInstruccionInicial" MonikerTypeName="ProgramaReferencesInstruccionInicialMoniker">
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionInicial" />
-      </XmlClassData>
-      <XmlClassData TypeName="ProgramaReferencesInstruccionFinal" MonikerAttributeName="" SerializeId="true" MonikerElementName="programaReferencesInstruccionFinalMoniker" ElementName="programaReferencesInstruccionFinal" MonikerTypeName="ProgramaReferencesInstruccionFinalMoniker">
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionFinal" />
+        <ElementData>
+          <XmlPropertyData XmlName="veces">
+            <DomainPropertyMoniker Name="InsRepetirG/Veces" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="InicialG" MonikerAttributeName="" SerializeId="true" MonikerElementName="inicialGMoniker" ElementName="inicialG" MonikerTypeName="InicialGMoniker">
         <ConnectorMoniker Name="InicialG" />
@@ -347,9 +442,6 @@
       </XmlClassData>
       <XmlClassData TypeName="ProgramaG" MonikerAttributeName="" SerializeId="true" MonikerElementName="programaGMoniker" ElementName="programaG" MonikerTypeName="ProgramaGMoniker">
         <GeometryShapeMoniker Name="ProgramaG" />
-      </XmlClassData>
-      <XmlClassData TypeName="InstruccionReferencessiguiente" MonikerAttributeName="" SerializeId="true" MonikerElementName="instruccionReferencessiguienteMoniker" ElementName="instruccionReferencessiguiente" MonikerTypeName="InstruccionReferencessiguienteMoniker">
-        <DomainRelationshipMoniker Name="InstruccionReferencessiguiente" />
       </XmlClassData>
       <XmlClassData TypeName="OrdenG" MonikerAttributeName="" SerializeId="true" MonikerElementName="ordenGMoniker" ElementName="ordenG" MonikerTypeName="OrdenGMoniker">
         <ConnectorMoniker Name="OrdenG" />
@@ -362,9 +454,22 @@
       </XmlClassData>
       <XmlClassData TypeName="InsPosicionG" MonikerAttributeName="" SerializeId="true" MonikerElementName="insPosicionGMoniker" ElementName="insPosicionG" MonikerTypeName="InsPosicionGMoniker">
         <GeometryShapeMoniker Name="InsPosicionG" />
+        <ElementData>
+          <XmlPropertyData XmlName="x">
+            <DomainPropertyMoniker Name="InsPosicionG/X" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="y">
+            <DomainPropertyMoniker Name="InsPosicionG/Y" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="InsMoverG" MonikerAttributeName="" SerializeId="true" MonikerElementName="insMoverGMoniker" ElementName="insMoverG" MonikerTypeName="InsMoverGMoniker">
         <GeometryShapeMoniker Name="InsMoverG" />
+        <ElementData>
+          <XmlPropertyData XmlName="pasos">
+            <DomainPropertyMoniker Name="InsMoverG/Pasos" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ProgramaImagen" MonikerAttributeName="" SerializeId="true" MonikerElementName="programaImagenMoniker" ElementName="programaImagen" MonikerTypeName="ProgramaImagenMoniker">
         <ConnectorMoniker Name="ProgramaImagen" />
@@ -390,67 +495,42 @@
       <XmlClassData TypeName="AplicacionIPKHasConjInstr" MonikerAttributeName="" SerializeId="true" MonikerElementName="aplicacionIPKHasConjInstrMoniker" ElementName="aplicacionIPKHasConjInstr" MonikerTypeName="AplicacionIPKHasConjInstrMoniker">
         <DomainRelationshipMoniker Name="AplicacionIPKHasConjInstr" />
       </XmlClassData>
+      <XmlClassData TypeName="Instruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="instruccionMoniker" ElementName="instruccion" MonikerTypeName="InstruccionMoniker">
+        <DomainClassMoniker Name="Instruccion" />
+      </XmlClassData>
+      <XmlClassData TypeName="InsFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="insFinMoniker" ElementName="insFin" MonikerTypeName="InsFinMoniker">
+        <DomainClassMoniker Name="InsFin" />
+      </XmlClassData>
+      <XmlClassData TypeName="InstruccionIntermediasReferencesInstruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="instruccionIntermediasReferencesInstruccionMoniker" ElementName="instruccionIntermediasReferencesInstruccion" MonikerTypeName="InstruccionIntermediasReferencesInstruccionMoniker">
+        <DomainRelationshipMoniker Name="InstruccionIntermediasReferencesInstruccion" />
+      </XmlClassData>
+      <XmlClassData TypeName="InicioPrograma" MonikerAttributeName="" SerializeId="true" MonikerElementName="inicioProgramaMoniker" ElementName="inicioPrograma" MonikerTypeName="InicioProgramaMoniker">
+        <DomainClassMoniker Name="InicioPrograma" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="instruccion">
+            <DomainRelationshipMoniker Name="InicioProgramaReferencesInstruccion" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ConjInstrHasInicioPrograma" MonikerAttributeName="" SerializeId="true" MonikerElementName="conjInstrHasInicioProgramaMoniker" ElementName="conjInstrHasInicioPrograma" MonikerTypeName="ConjInstrHasInicioProgramaMoniker">
+        <DomainRelationshipMoniker Name="ConjInstrHasInicioPrograma" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConjInstrHasInstruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conjInstrHasInstruccionMoniker" ElementName="conjInstrHasInstruccion" MonikerTypeName="ConjInstrHasInstruccionMoniker">
+        <DomainRelationshipMoniker Name="ConjInstrHasInstruccion" />
+      </XmlClassData>
+      <XmlClassData TypeName="InicioProgramaReferencesInstruccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="inicioProgramaReferencesInstruccionMoniker" ElementName="inicioProgramaReferencesInstruccion" MonikerTypeName="InicioProgramaReferencesInstruccionMoniker">
+        <DomainRelationshipMoniker Name="InicioProgramaReferencesInstruccion" />
+      </XmlClassData>
+      <XmlClassData TypeName="InicioG" MonikerAttributeName="" SerializeId="true" MonikerElementName="inicioGMoniker" ElementName="inicioG" MonikerTypeName="InicioGMoniker">
+        <GeometryShapeMoniker Name="InicioG" />
+      </XmlClassData>
+      <XmlClassData TypeName="FinG" MonikerAttributeName="" SerializeId="true" MonikerElementName="finGMoniker" ElementName="finG" MonikerTypeName="FinGMoniker">
+        <GeometryShapeMoniker Name="FinG" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="DGH_DGC_SOM_IKPExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="ProgramaReferencesInstruccionInicialBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionInicial" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="ConjInstr" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Instruccion" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="ProgramaReferencesInstruccionFinalBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionFinal" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="ConjInstr" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Instruccion" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="InstruccionReferencessiguienteBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="InstruccionReferencessiguiente" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Instruccion" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Instruccion" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
     <ConnectionBuilder Name="ImagenReferencesProgramaBuilder">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="ImagenReferencesPrograma" />
@@ -484,6 +564,44 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Subprograma" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="InstruccionIntermediasReferencesInstruccionBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="InstruccionIntermediasReferencesInstruccion" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="InstruccionIntermedias" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Instruccion" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="InicioProgramaReferencesInstruccionBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="InicioProgramaReferencesInstruccion" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="InicioPrograma" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Instruccion" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -551,20 +669,22 @@
         </ParentElementPath>
         <GeometryShapeMoniker Name="SubprogramaG" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="InsFin" />
+        <ParentElementPath>
+          <DomainPath>ConjInstrHasInstruccion.ConjInstr/!ConjInstr/AplicacionIPKHasConjInstr.AplicacionIPK/!AplicacionIPK</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="FinG" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="InicioPrograma" />
+        <ParentElementPath>
+          <DomainPath>ConjInstrHasInicioPrograma.ConjInstr/!ConjInstr/AplicacionIPKHasConjInstr.AplicacionIPK/!AplicacionIPK</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="InicioG" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="InicialG" />
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionInicial" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="FinalG" />
-        <DomainRelationshipMoniker Name="ProgramaReferencesInstruccionFinal" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="OrdenG" />
-        <DomainRelationshipMoniker Name="InstruccionReferencessiguiente" />
-      </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ProgramaImagen" />
         <DomainRelationshipMoniker Name="ImagenReferencesPrograma" />
@@ -572,6 +692,14 @@
       <ConnectorMap>
         <ConnectorMoniker Name="RepetirSubprogramaG" />
         <DomainRelationshipMoniker Name="InsRepetirReferencesSubprograma" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="OrdenG" />
+        <DomainRelationshipMoniker Name="InstruccionIntermediasReferencesInstruccion" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="OrdenG" />
+        <DomainRelationshipMoniker Name="InicioProgramaReferencesInstruccion" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -598,14 +726,8 @@
       <ElementTool Name="FijarTool" ToolboxIcon="Resources\programa.bmp" Caption="FijarTool" Tooltip="Fijar Tool" HelpKeyword="FijarTool">
         <DomainClassMoniker Name="InsFijar" />
       </ElementTool>
-      <ConnectionTool Name="InicialTool" ToolboxIcon="Resources\imagen.bmp" Caption="InicialTool" Tooltip="Inicial Tool" HelpKeyword="">
-        <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/ProgramaReferencesInstruccionInicialBuilder" />
-      </ConnectionTool>
-      <ConnectionTool Name="FinalTool" ToolboxIcon="Resources\imagen.bmp" Caption="FinalTool" Tooltip="Final Tool" HelpKeyword="FinalTool">
-        <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/ProgramaReferencesInstruccionFinalBuilder" />
-      </ConnectionTool>
       <ConnectionTool Name="OrdenTool" ToolboxIcon="Resources\imagen.bmp" Caption="OrdenTool" Tooltip="Orden Tool" HelpKeyword="OrdenTool">
-        <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/InstruccionReferencessiguienteBuilder" />
+        <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/InstruccionIntermediasReferencesInstruccionBuilder" />
       </ConnectionTool>
       <ElementTool Name="PosicionTool" ToolboxIcon="Resources\programa.bmp" Caption="PosicionTool" Tooltip="Posicion Tool" HelpKeyword="PosicionTool">
         <DomainClassMoniker Name="InsPosicion" />
@@ -622,6 +744,15 @@
       <ElementTool Name="SubprogramaTool" ToolboxIcon="Resources\programa.bmp" Caption="SubprogramaTool" Tooltip="Subprograma Tool" HelpKeyword="SubprogramaTool">
         <DomainClassMoniker Name="Subprograma" />
       </ElementTool>
+      <ElementTool Name="InicioTool" ToolboxIcon="Resources\imagen.bmp" Caption="InicioTool" Tooltip="Inicio Tool" HelpKeyword="InicioTool">
+        <DomainClassMoniker Name="InicioPrograma" />
+      </ElementTool>
+      <ElementTool Name="FinTool" ToolboxIcon="Resources\programa.bmp" Caption="FinTool" Tooltip="Fin Tool" HelpKeyword="FinTool">
+        <DomainClassMoniker Name="InsFin" />
+      </ElementTool>
+      <ConnectionTool Name="PrimeraInstruccion" ToolboxIcon="Resources\imagen.bmp" Caption="PrimeraInstruccion" Tooltip="Primera Instruccion" HelpKeyword="PrimeraInstruccion">
+        <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/InicioProgramaReferencesInstruccionBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="DGH_DGC_SOM_IKPDiagram" />

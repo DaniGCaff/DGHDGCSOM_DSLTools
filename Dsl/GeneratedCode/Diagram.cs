@@ -185,15 +185,33 @@ namespace CE.DGH_DGC_SOM_IKP
 		}
 		
 		/// <summary>
+		/// Most connectors are mapped to element links, but there can be exceptions. This method tell if a connector should be
+		/// mapped to an element link.
+		/// </summary>
+		public override bool IsConnectorMappedToLink(DslDiagrams::BinaryLinkShape connector)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert(connector != null);
+			if (connector == null)
+				throw new global::System.ArgumentNullException("connector");
+			#endregion
+			if (connector.GetType() == typeof(global::CE.DGH_DGC_SOM_IKP.FinalG))
+				return false;
+			if (connector.GetType() == typeof(global::CE.DGH_DGC_SOM_IKP.InicialG))
+				return false;
+			return base.IsConnectorMappedToLink(connector);
+		}
+		
+		/// <summary>
 		/// Creates a new shape for the given model element as part of view fixup
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::CE.DGH_DGC_SOM_IKP.Programa)
+			if(element is global::CE.DGH_DGC_SOM_IKP.InsMover)
 			{
-				global::CE.DGH_DGC_SOM_IKP.ProgramaG newShape = new global::CE.DGH_DGC_SOM_IKP.ProgramaG(this.Partition);
+				global::CE.DGH_DGC_SOM_IKP.InsMoverG newShape = new global::CE.DGH_DGC_SOM_IKP.InsMoverG(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -221,9 +239,15 @@ namespace CE.DGH_DGC_SOM_IKP
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::CE.DGH_DGC_SOM_IKP.InsMover)
+			if(element is global::CE.DGH_DGC_SOM_IKP.Programa)
 			{
-				global::CE.DGH_DGC_SOM_IKP.InsMoverG newShape = new global::CE.DGH_DGC_SOM_IKP.InsMoverG(this.Partition);
+				global::CE.DGH_DGC_SOM_IKP.ProgramaG newShape = new global::CE.DGH_DGC_SOM_IKP.ProgramaG(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::CE.DGH_DGC_SOM_IKP.InsFin)
+			{
+				global::CE.DGH_DGC_SOM_IKP.FinG newShape = new global::CE.DGH_DGC_SOM_IKP.FinG(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -239,19 +263,10 @@ namespace CE.DGH_DGC_SOM_IKP
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial)
+			if(element is global::CE.DGH_DGC_SOM_IKP.InicioPrograma)
 			{
-				global::CE.DGH_DGC_SOM_IKP.InicialG newShape = new global::CE.DGH_DGC_SOM_IKP.InicialG(this.Partition);
-				return newShape;
-			}
-			if(element is global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal)
-			{
-				global::CE.DGH_DGC_SOM_IKP.FinalG newShape = new global::CE.DGH_DGC_SOM_IKP.FinalG(this.Partition);
-				return newShape;
-			}
-			if(element is global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente)
-			{
-				global::CE.DGH_DGC_SOM_IKP.OrdenG newShape = new global::CE.DGH_DGC_SOM_IKP.OrdenG(this.Partition);
+				global::CE.DGH_DGC_SOM_IKP.InicioG newShape = new global::CE.DGH_DGC_SOM_IKP.InicioG(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
 			if(element is global::CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma)
@@ -262,6 +277,16 @@ namespace CE.DGH_DGC_SOM_IKP
 			if(element is global::CE.DGH_DGC_SOM_IKP.InsRepetirReferencesSubprograma)
 			{
 				global::CE.DGH_DGC_SOM_IKP.RepetirSubprogramaG newShape = new global::CE.DGH_DGC_SOM_IKP.RepetirSubprogramaG(this.Partition);
+				return newShape;
+			}
+			if(element is global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion)
+			{
+				global::CE.DGH_DGC_SOM_IKP.OrdenG newShape = new global::CE.DGH_DGC_SOM_IKP.OrdenG(this.Partition);
+				return newShape;
+			}
+			if(element is global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion)
+			{
+				global::CE.DGH_DGC_SOM_IKP.OrdenG newShape = new global::CE.DGH_DGC_SOM_IKP.OrdenG(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -281,11 +306,10 @@ namespace CE.DGH_DGC_SOM_IKP
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::CE.DGH_DGC_SOM_IKP.InicialToolConnectAction inicialToolConnectAction;
-		private global::CE.DGH_DGC_SOM_IKP.FinalToolConnectAction finalToolConnectAction;
 		private global::CE.DGH_DGC_SOM_IKP.OrdenToolConnectAction ordenToolConnectAction;
 		private global::CE.DGH_DGC_SOM_IKP.ProgramaImagenToolConnectAction programaImagenToolConnectAction;
 		private global::CE.DGH_DGC_SOM_IKP.RepetirSubprogramaToolConnectAction repetirSubprogramaToolConnectAction;
+		private global::CE.DGH_DGC_SOM_IKP.PrimeraInstruccionConnectAction primeraInstruccionConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -308,25 +332,7 @@ namespace CE.DGH_DGC_SOM_IKP
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxHelper.InicialToolFilterString))
-				{
-					if (this.inicialToolConnectAction == null)
-					{
-						this.inicialToolConnectAction = new global::CE.DGH_DGC_SOM_IKP.InicialToolConnectAction(this);
-						this.inicialToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.inicialToolConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxHelper.FinalToolFilterString))
-				{
-					if (this.finalToolConnectAction == null)
-					{
-						this.finalToolConnectAction = new global::CE.DGH_DGC_SOM_IKP.FinalToolConnectAction(this);
-						this.finalToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.finalToolConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxHelper.OrdenToolFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxHelper.OrdenToolFilterString))
 				{
 					if (this.ordenToolConnectAction == null)
 					{
@@ -352,6 +358,15 @@ namespace CE.DGH_DGC_SOM_IKP
 						this.repetirSubprogramaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.repetirSubprogramaToolConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxHelper.PrimeraInstruccionFilterString))
+				{
+					if (this.primeraInstruccionConnectAction == null)
+					{
+						this.primeraInstruccionConnectAction = new global::CE.DGH_DGC_SOM_IKP.PrimeraInstruccionConnectAction(this);
+						this.primeraInstruccionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.primeraInstruccionConnectAction;
 				} 
 				else
 				{
@@ -410,16 +425,6 @@ namespace CE.DGH_DGC_SOM_IKP
 			{
 				if(disposing)
 				{
-					if(this.inicialToolConnectAction != null)
-					{
-						this.inicialToolConnectAction.Dispose();
-						this.inicialToolConnectAction = null;
-					}
-					if(this.finalToolConnectAction != null)
-					{
-						this.finalToolConnectAction.Dispose();
-						this.finalToolConnectAction = null;
-					}
 					if(this.ordenToolConnectAction != null)
 					{
 						this.ordenToolConnectAction.Dispose();
@@ -434,6 +439,11 @@ namespace CE.DGH_DGC_SOM_IKP
 					{
 						this.repetirSubprogramaToolConnectAction.Dispose();
 						this.repetirSubprogramaToolConnectAction = null;
+					}
+					if(this.primeraInstruccionConnectAction != null)
+					{
+						this.primeraInstruccionConnectAction.Dispose();
+						this.primeraInstruccionConnectAction = null;
 					}
 				}
 			}
@@ -488,19 +498,20 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsPosicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsMover), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.Subprograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsRepetir), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.Programa), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsFijar), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsPosicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsApuntar), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsMover), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsFijar), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.Subprograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.Programa), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsRepetirReferencesSubprograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.Imagen), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InicioPrograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -516,32 +527,6 @@ namespace CE.DGH_DGC_SOM_IKP
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsPosicion)
-				{
-					// Method:
-					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsPosicion(InsPosicion childElement)
-					// {
-					// }
-					// must be implemented in a partial class of CE.DGH_DGC_SOM_IKP.FixUpDiagram.  Given a child element,
-					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
-					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForInsPosicion((global::CE.DGH_DGC_SOM_IKP.InsPosicion)childElement);
-				} else
-				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsMover)
-				{
-					// Method:
-					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsMover(InsMover childElement)
-					// {
-					// }
-					// must be implemented in a partial class of CE.DGH_DGC_SOM_IKP.FixUpDiagram.  Given a child element,
-					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
-					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForInsMover((global::CE.DGH_DGC_SOM_IKP.InsMover)childElement);
-				} else
-				if(childElement is global::CE.DGH_DGC_SOM_IKP.Subprograma)
-				{
-					parentElement = GetParentForSubprograma((global::CE.DGH_DGC_SOM_IKP.Subprograma)childElement);
-				} else
 				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsRepetir)
 				{
 					// Method:
@@ -553,20 +538,16 @@ namespace CE.DGH_DGC_SOM_IKP
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForInsRepetir((global::CE.DGH_DGC_SOM_IKP.InsRepetir)childElement);
 				} else
-				if(childElement is global::CE.DGH_DGC_SOM_IKP.Programa)
-				{
-					parentElement = GetParentForPrograma((global::CE.DGH_DGC_SOM_IKP.Programa)childElement);
-				} else
-				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsFijar)
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsPosicion)
 				{
 					// Method:
-					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsFijar(InsFijar childElement)
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsPosicion(InsPosicion childElement)
 					// {
 					// }
 					// must be implemented in a partial class of CE.DGH_DGC_SOM_IKP.FixUpDiagram.  Given a child element,
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForInsFijar((global::CE.DGH_DGC_SOM_IKP.InsFijar)childElement);
+					parentElement = GetParentForInsPosicion((global::CE.DGH_DGC_SOM_IKP.InsPosicion)childElement);
 				} else
 				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsApuntar)
 				{
@@ -579,9 +560,47 @@ namespace CE.DGH_DGC_SOM_IKP
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForInsApuntar((global::CE.DGH_DGC_SOM_IKP.InsApuntar)childElement);
 				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsMover)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsMover(InsMover childElement)
+					// {
+					// }
+					// must be implemented in a partial class of CE.DGH_DGC_SOM_IKP.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForInsMover((global::CE.DGH_DGC_SOM_IKP.InsMover)childElement);
+				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsFijar)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInsFijar(InsFijar childElement)
+					// {
+					// }
+					// must be implemented in a partial class of CE.DGH_DGC_SOM_IKP.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForInsFijar((global::CE.DGH_DGC_SOM_IKP.InsFijar)childElement);
+				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.Subprograma)
+				{
+					parentElement = GetParentForSubprograma((global::CE.DGH_DGC_SOM_IKP.Subprograma)childElement);
+				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.InsFin)
+				{
+					parentElement = GetParentForInsFin((global::CE.DGH_DGC_SOM_IKP.InsFin)childElement);
+				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.Programa)
+				{
+					parentElement = GetParentForPrograma((global::CE.DGH_DGC_SOM_IKP.Programa)childElement);
+				} else
 				if(childElement is global::CE.DGH_DGC_SOM_IKP.Imagen)
 				{
 					parentElement = GetParentForImagen((global::CE.DGH_DGC_SOM_IKP.Imagen)childElement);
+				} else
+				if(childElement is global::CE.DGH_DGC_SOM_IKP.InicioPrograma)
+				{
+					parentElement = GetParentForInicioPrograma((global::CE.DGH_DGC_SOM_IKP.InicioPrograma)childElement);
 				} else
 				{
 					parentElement = null;
@@ -610,6 +629,26 @@ namespace CE.DGH_DGC_SOM_IKP
 			{
 				// Segments 0 and 1
 				global::CE.DGH_DGC_SOM_IKP.AplicacionIPK result = root.AplicacionIPK;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::CE.DGH_DGC_SOM_IKP.AplicacionIPK GetParentForInsFin( global::CE.DGH_DGC_SOM_IKP.Instruccion root )
+			{
+				// Segments 0 and 1
+				global::CE.DGH_DGC_SOM_IKP.ConjInstr root2 = root.ConjInstr;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::CE.DGH_DGC_SOM_IKP.AplicacionIPK result = root2.AplicacionIPK;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::CE.DGH_DGC_SOM_IKP.AplicacionIPK GetParentForInicioPrograma( global::CE.DGH_DGC_SOM_IKP.InicioPrograma root )
+			{
+				// Segments 0 and 1
+				global::CE.DGH_DGC_SOM_IKP.ConjInstr root2 = root.ConjInstr;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::CE.DGH_DGC_SOM_IKP.AplicacionIPK result = root2.AplicacionIPK;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -702,11 +741,10 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InsRepetirReferencesSubprograma), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

@@ -251,1024 +251,6 @@ namespace CE.DGH_DGC_SOM_IKP
 namespace CE.DGH_DGC_SOM_IKP
 {
 	/// <summary>
-	/// DomainRelationship ConjInstrHasInstruccion
-	/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion
-	/// </summary>
-	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("85fa269b-5eb1-4e04-aa42-421f8d3acd22")]
-	public partial class ConjInstrHasInstruccion : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ConjInstrHasInstruccion domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x85fa269b, 0x5eb1, 0x4e04, 0xaa, 0x42, 0x42, 0x1f, 0x8d, 0x3a, 0xcd, 0x22);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ConjInstrHasInstruccion link in the same Partition as the given ConjInstr
-		/// </summary>
-		/// <param name="source">ConjInstr to use as the source of the relationship.</param>
-		/// <param name="target">Instruccion to use as the target of the relationship.</param>
-		public ConjInstrHasInstruccion(ConjInstr source, Instruccion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ConjInstrHasInstruccion.ConjInstrDomainRoleId, source), new DslModeling::RoleAssignment(ConjInstrHasInstruccion.InstruccionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ConjInstrHasInstruccion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ConjInstrHasInstruccion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ConjInstrHasInstruccion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ConjInstrHasInstruccion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ConjInstr domain role code
-		
-		/// <summary>
-		/// ConjInstr domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ConjInstrDomainRoleId = new global::System.Guid(0xc1697f7d, 0x4ea1, 0x4dbb, 0x86, 0x54, 0xa5, 0xeb, 0xf9, 0x3c, 0x70, 0x91);
-		
-		/// <summary>
-		/// DomainRole ConjInstr
-		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Instruccion", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("c1697f7d-4ea1-4dbb-8654-a5ebf93c7091")]
-		public virtual ConjInstr ConjInstr
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ConjInstr)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConjInstrDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConjInstrDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ConjInstr of a Instruccion
-		/// <summary>
-		/// Gets ConjInstr.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ConjInstr GetConjInstr(Instruccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as ConjInstr;
-		}
-		
-		/// <summary>
-		/// Sets ConjInstr.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetConjInstr(Instruccion element, ConjInstr newConjInstr)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newConjInstr);
-		}
-		#endregion
-		#region Instruccion domain role code
-		
-		/// <summary>
-		/// Instruccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0xda6e10ad, 0x8c38, 0x47a7, 0xa6, 0xd9, 0xa5, 0x00, 0xac, 0x7d, 0x60, 0xdb);
-		
-		/// <summary>
-		/// DomainRole Instruccion
-		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ConjInstr", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("da6e10ad-8c38-47a7-a6d9-a500ac7d60db")]
-		public virtual Instruccion Instruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Instruccion of a ConjInstr
-		/// <summary>
-		/// Gets a list of Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Instruccion> GetInstruccion(ConjInstr element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Instruccion>, Instruccion>(element, ConjInstrDomainRoleId);
-		}
-		#endregion
-		#region ConjInstr link accessor
-		/// <summary>
-		/// Get the list of ConjInstrHasInstruccion links to a ConjInstr.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> GetLinksToInstruccion ( global::CE.DGH_DGC_SOM_IKP.ConjInstr conjInstrInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(conjInstrInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
-		}
-		#endregion
-		#region Instruccion link accessor
-		/// <summary>
-		/// Get the ConjInstrHasInstruccion link to a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion GetLinkToConjInstr (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ConjInstrHasInstruccion instance accessors
-		
-		/// <summary>
-		/// Get any ConjInstrHasInstruccion links between a given ConjInstr and a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> GetLinks( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>();
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ConjInstrHasInstruccion link between a given ConjInstrand a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion GetLink( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace CE.DGH_DGC_SOM_IKP
-{
-	/// <summary>
-	/// DomainRelationship ProgramaReferencesInstruccionInicial
-	/// Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial
-	/// </summary>
-	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("ff42f1f1-39a4-4af7-9423-7672fa7b1a2d")]
-	public partial class ProgramaReferencesInstruccionInicial : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ProgramaReferencesInstruccionInicial domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xff42f1f1, 0x39a4, 0x4af7, 0x94, 0x23, 0x76, 0x72, 0xfa, 0x7b, 0x1a, 0x2d);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ProgramaReferencesInstruccionInicial link in the same Partition as the given ConjInstr
-		/// </summary>
-		/// <param name="source">ConjInstr to use as the source of the relationship.</param>
-		/// <param name="target">Instruccion to use as the target of the relationship.</param>
-		public ProgramaReferencesInstruccionInicial(ConjInstr source, Instruccion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId, source), new DslModeling::RoleAssignment(ProgramaReferencesInstruccionInicial.InstruccionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ProgramaReferencesInstruccionInicial(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ProgramaReferencesInstruccionInicial(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ProgramaReferencesInstruccionInicial(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ProgramaReferencesInstruccionInicial(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ConjInstr domain role code
-		
-		/// <summary>
-		/// ConjInstr domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ConjInstrDomainRoleId = new global::System.Guid(0x27553de1, 0x4b1a, 0x4ced, 0xad, 0x81, 0x17, 0x32, 0x8c, 0x34, 0x9b, 0x94);
-		
-		/// <summary>
-		/// DomainRole ConjInstr
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstr
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "InstruccionInicial", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("27553de1-4b1a-4ced-ad81-17328c349b94")]
-		public virtual ConjInstr ConjInstr
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ConjInstr)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConjInstrDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConjInstrDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ProgramaA of a Instruccion
-		/// <summary>
-		/// Gets ProgramaA.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ConjInstr GetProgramaA(Instruccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as ConjInstr;
-		}
-		
-		/// <summary>
-		/// Sets ProgramaA.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetProgramaA(Instruccion element, ConjInstr newConjInstr)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newConjInstr);
-		}
-		#endregion
-		#region Instruccion domain role code
-		
-		/// <summary>
-		/// Instruccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0x24a373c3, 0xf2ec, 0x4c47, 0x8d, 0x82, 0x91, 0xbb, 0x32, 0x25, 0x86, 0x47);
-		
-		/// <summary>
-		/// DomainRole Instruccion
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Instruccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ProgramaA", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("24a373c3-f2ec-4c47-8d82-91bb32258647")]
-		public virtual Instruccion Instruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access InstruccionInicial of a ConjInstr
-		/// <summary>
-		/// Gets InstruccionInicial.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Instruccion GetInstruccionInicial(ConjInstr element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ConjInstrDomainRoleId) as Instruccion;
-		}
-		
-		/// <summary>
-		/// Sets InstruccionInicial.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetInstruccionInicial(ConjInstr element, Instruccion newInstruccion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ConjInstrDomainRoleId, newInstruccion);
-		}
-		#endregion
-		#region ConjInstr link accessor
-		/// <summary>
-		/// Get the ProgramaReferencesInstruccionInicial link to a ConjInstr.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial GetLinkToInstruccionInicial (global::CE.DGH_DGC_SOM_IKP.ConjInstr conjInstrInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial>(conjInstrInstance, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ConjInstr not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region Instruccion link accessor
-		/// <summary>
-		/// Get the ProgramaReferencesInstruccionInicial link to a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial GetLinkToProgramaA (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.InstruccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ProgramaReferencesInstruccionInicial instance accessors
-		
-		/// <summary>
-		/// Get any ProgramaReferencesInstruccionInicial links between a given ConjInstr and a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> GetLinks( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial>();
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial>(source, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ProgramaReferencesInstruccionInicial link between a given ConjInstrand a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial GetLink( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial>(source, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace CE.DGH_DGC_SOM_IKP
-{
-	/// <summary>
-	/// DomainRelationship ProgramaReferencesInstruccionFinal
-	/// Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal
-	/// </summary>
-	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("faa9fb73-b24a-4829-a5b3-a7cb7f1175b3")]
-	public partial class ProgramaReferencesInstruccionFinal : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ProgramaReferencesInstruccionFinal domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfaa9fb73, 0xb24a, 0x4829, 0xa5, 0xb3, 0xa7, 0xcb, 0x7f, 0x11, 0x75, 0xb3);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ProgramaReferencesInstruccionFinal link in the same Partition as the given ConjInstr
-		/// </summary>
-		/// <param name="source">ConjInstr to use as the source of the relationship.</param>
-		/// <param name="target">Instruccion to use as the target of the relationship.</param>
-		public ProgramaReferencesInstruccionFinal(ConjInstr source, Instruccion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId, source), new DslModeling::RoleAssignment(ProgramaReferencesInstruccionFinal.InstruccionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ProgramaReferencesInstruccionFinal(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ProgramaReferencesInstruccionFinal(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ProgramaReferencesInstruccionFinal(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ProgramaReferencesInstruccionFinal(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ConjInstr domain role code
-		
-		/// <summary>
-		/// ConjInstr domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ConjInstrDomainRoleId = new global::System.Guid(0xbac43b96, 0x40f2, 0x4ad4, 0x98, 0x2b, 0x85, 0xd5, 0xd4, 0x8d, 0x67, 0x17);
-		
-		/// <summary>
-		/// DomainRole ConjInstr
-		/// Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstr
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "InstruccionFinal", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("bac43b96-40f2-4ad4-982b-85d5d48d6717")]
-		public virtual ConjInstr ConjInstr
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ConjInstr)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConjInstrDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConjInstrDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ProgramaB of a Instruccion
-		/// <summary>
-		/// Gets ProgramaB.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ConjInstr GetProgramaB(Instruccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as ConjInstr;
-		}
-		
-		/// <summary>
-		/// Sets ProgramaB.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetProgramaB(Instruccion element, ConjInstr newConjInstr)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newConjInstr);
-		}
-		#endregion
-		#region Instruccion domain role code
-		
-		/// <summary>
-		/// Instruccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0x32ff2563, 0x79b8, 0x4089, 0x85, 0x17, 0xe7, 0xb8, 0xde, 0x68, 0x53, 0xd5);
-		
-		/// <summary>
-		/// DomainRole Instruccion
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Instruccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ProgramaB", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("32ff2563-79b8-4089-8517-e7b8de6853d5")]
-		public virtual Instruccion Instruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access InstruccionFinal of a ConjInstr
-		/// <summary>
-		/// Gets InstruccionFinal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Instruccion GetInstruccionFinal(ConjInstr element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ConjInstrDomainRoleId) as Instruccion;
-		}
-		
-		/// <summary>
-		/// Sets InstruccionFinal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetInstruccionFinal(ConjInstr element, Instruccion newInstruccion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ConjInstrDomainRoleId, newInstruccion);
-		}
-		#endregion
-		#region ConjInstr link accessor
-		/// <summary>
-		/// Get the ProgramaReferencesInstruccionFinal link to a ConjInstr.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal GetLinkToInstruccionFinal (global::CE.DGH_DGC_SOM_IKP.ConjInstr conjInstrInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal>(conjInstrInstance, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ConjInstr not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region Instruccion link accessor
-		/// <summary>
-		/// Get the ProgramaReferencesInstruccionFinal link to a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal GetLinkToProgramaB (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.InstruccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ProgramaReferencesInstruccionFinal instance accessors
-		
-		/// <summary>
-		/// Get any ProgramaReferencesInstruccionFinal links between a given ConjInstr and a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> GetLinks( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal>();
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal>(source, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ProgramaReferencesInstruccionFinal link between a given ConjInstrand a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal GetLink( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal>(source, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal link in links )
-			{
-				if ( target.Equals(link.Instruccion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace CE.DGH_DGC_SOM_IKP
-{
-	/// <summary>
-	/// DomainRelationship InstruccionReferencessiguiente
-	/// Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente
-	/// </summary>
-	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("c3481972-5ae6-4069-9651-17b38b9ed74a")]
-	public partial class InstruccionReferencessiguiente : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// InstruccionReferencessiguiente domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc3481972, 0x5ae6, 0x4069, 0x96, 0x51, 0x17, 0xb3, 0x8b, 0x9e, 0xd7, 0x4a);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a InstruccionReferencessiguiente link in the same Partition as the given Instruccion
-		/// </summary>
-		/// <param name="source">Instruccion to use as the source of the relationship.</param>
-		/// <param name="target">Instruccion to use as the target of the relationship.</param>
-		public InstruccionReferencessiguiente(Instruccion source, Instruccion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(InstruccionReferencessiguiente.SourceInstruccionDomainRoleId, source), new DslModeling::RoleAssignment(InstruccionReferencessiguiente.TargetInstruccionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public InstruccionReferencessiguiente(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public InstruccionReferencessiguiente(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public InstruccionReferencessiguiente(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public InstruccionReferencessiguiente(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region SourceInstruccion domain role code
-		
-		/// <summary>
-		/// SourceInstruccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceInstruccionDomainRoleId = new global::System.Guid(0xf01783b4, 0x46d3, 0x4277, 0x95, 0x8a, 0xcb, 0x33, 0x30, 0x53, 0x83, 0x0b);
-		
-		/// <summary>
-		/// DomainRole SourceInstruccion
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "siguiente", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("f01783b4-46d3-4277-958a-cb333053830b")]
-		public virtual Instruccion SourceInstruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceInstruccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceInstruccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access anterior of a Instruccion
-		/// <summary>
-		/// Gets anterior.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Instruccion Getanterior(Instruccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TargetInstruccionDomainRoleId) as Instruccion;
-		}
-		
-		/// <summary>
-		/// Sets anterior.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void Setanterior(Instruccion element, Instruccion newSourceInstruccion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, TargetInstruccionDomainRoleId, newSourceInstruccion);
-		}
-		#endregion
-		#region TargetInstruccion domain role code
-		
-		/// <summary>
-		/// TargetInstruccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetInstruccionDomainRoleId = new global::System.Guid(0x5bc8bef5, 0x7760, 0x4dc6, 0x95, 0x28, 0x06, 0xe9, 0x81, 0x77, 0xfe, 0x52);
-		
-		/// <summary>
-		/// DomainRole TargetInstruccion
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "anterior", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("5bc8bef5-7760-4dc6-9528-06e98177fe52")]
-		public virtual Instruccion TargetInstruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetInstruccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetInstruccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access siguiente of a Instruccion
-		/// <summary>
-		/// Gets siguiente.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Instruccion Getsiguiente(Instruccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SourceInstruccionDomainRoleId) as Instruccion;
-		}
-		
-		/// <summary>
-		/// Sets siguiente.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void Setsiguiente(Instruccion element, Instruccion newTargetInstruccion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, SourceInstruccionDomainRoleId, newTargetInstruccion);
-		}
-		#endregion
-		#region SourceInstruccion link accessor
-		/// <summary>
-		/// Get the InstruccionReferencessiguiente link to a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente GetLinkTosiguiente (global::CE.DGH_DGC_SOM_IKP.Instruccion sourceInstruccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente>(sourceInstruccionInstance, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SourceInstruccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TargetInstruccion link accessor
-		/// <summary>
-		/// Get the InstruccionReferencessiguiente link to a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente GetLinkToanterior (global::CE.DGH_DGC_SOM_IKP.Instruccion targetInstruccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente>(targetInstruccionInstance, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TargetInstruccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region InstruccionReferencessiguiente instance accessors
-		
-		/// <summary>
-		/// Get any InstruccionReferencessiguiente links between a given Instruccion and a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> GetLinks( global::CE.DGH_DGC_SOM_IKP.Instruccion source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente>();
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente>(source, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccionDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente link in links )
-			{
-				if ( target.Equals(link.TargetInstruccion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one InstruccionReferencessiguiente link between a given Instruccionand a Instruccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente GetLink( global::CE.DGH_DGC_SOM_IKP.Instruccion source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
-		{
-			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente>(source, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccionDomainRoleId);
-			foreach ( global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente link in links )
-			{
-				if ( target.Equals(link.TargetInstruccion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace CE.DGH_DGC_SOM_IKP
-{
-	/// <summary>
 	/// DomainRelationship ImagenReferencesPrograma
 	/// Description for CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma
 	/// </summary>
@@ -2011,6 +993,1023 @@ namespace CE.DGH_DGC_SOM_IKP
 			foreach ( global::CE.DGH_DGC_SOM_IKP.AplicacionIPKHasConjInstr link in links )
 			{
 				if ( target.Equals(link.ConjInstr) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainRelationship InstruccionIntermediasReferencesInstruccion
+	/// Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("05582f71-e767-4a45-8c34-3487c498822d")]
+	public partial class InstruccionIntermediasReferencesInstruccion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// InstruccionIntermediasReferencesInstruccion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x05582f71, 0xe767, 0x4a45, 0x8c, 0x34, 0x34, 0x87, 0xc4, 0x98, 0x82, 0x2d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a InstruccionIntermediasReferencesInstruccion link in the same Partition as the given InstruccionIntermedias
+		/// </summary>
+		/// <param name="source">InstruccionIntermedias to use as the source of the relationship.</param>
+		/// <param name="target">Instruccion to use as the target of the relationship.</param>
+		public InstruccionIntermediasReferencesInstruccion(InstruccionIntermedias source, Instruccion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId, source), new DslModeling::RoleAssignment(InstruccionIntermediasReferencesInstruccion.InstruccionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public InstruccionIntermediasReferencesInstruccion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public InstruccionIntermediasReferencesInstruccion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public InstruccionIntermediasReferencesInstruccion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public InstruccionIntermediasReferencesInstruccion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region InstruccionIntermedias domain role code
+		
+		/// <summary>
+		/// InstruccionIntermedias domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InstruccionIntermediasDomainRoleId = new global::System.Guid(0xd52b8078, 0x2828, 0x4731, 0x86, 0x04, 0x2a, 0xc9, 0x4d, 0x8d, 0x09, 0xa0);
+		
+		/// <summary>
+		/// DomainRole InstruccionIntermedias
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermedias
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Instruccion", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("d52b8078-2828-4731-8604-2ac94d8d09a0")]
+		public virtual InstruccionIntermedias InstruccionIntermedias
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (InstruccionIntermedias)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionIntermediasDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionIntermediasDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access InstruccionIntermedias of a Instruccion
+		/// <summary>
+		/// Gets InstruccionIntermedias.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static InstruccionIntermedias GetInstruccionIntermedias(Instruccion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as InstruccionIntermedias;
+		}
+		
+		/// <summary>
+		/// Sets InstruccionIntermedias.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetInstruccionIntermedias(Instruccion element, InstruccionIntermedias newInstruccionIntermedias)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newInstruccionIntermedias);
+		}
+		#endregion
+		#region Instruccion domain role code
+		
+		/// <summary>
+		/// Instruccion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0x130bf16b, 0x0d40, 0x405a, 0x9c, 0x96, 0x4d, 0xa1, 0xf1, 0x0c, 0xb7, 0xe0);
+		
+		/// <summary>
+		/// DomainRole Instruccion
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Instruccion
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "InstruccionIntermedias", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("130bf16b-0d40-405a-9c96-4da1f10cb7e0")]
+		public virtual Instruccion Instruccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Instruccion of a InstruccionIntermedias
+		/// <summary>
+		/// Gets Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Instruccion GetInstruccion(InstruccionIntermedias element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionIntermediasDomainRoleId) as Instruccion;
+		}
+		
+		/// <summary>
+		/// Sets Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetInstruccion(InstruccionIntermedias element, Instruccion newInstruccion)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionIntermediasDomainRoleId, newInstruccion);
+		}
+		#endregion
+		#region InstruccionIntermedias link accessor
+		/// <summary>
+		/// Get the InstruccionIntermediasReferencesInstruccion link to a InstruccionIntermedias.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion GetLinkToInstruccion (global::CE.DGH_DGC_SOM_IKP.InstruccionIntermedias instruccionIntermediasInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion>(instruccionIntermediasInstance, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of InstruccionIntermedias not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Instruccion link accessor
+		/// <summary>
+		/// Get the InstruccionIntermediasReferencesInstruccion link to a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion GetLinkToInstruccionIntermedias (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region InstruccionIntermediasReferencesInstruccion instance accessors
+		
+		/// <summary>
+		/// Get any InstruccionIntermediasReferencesInstruccion links between a given InstruccionIntermedias and a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> GetLinks( global::CE.DGH_DGC_SOM_IKP.InstruccionIntermedias source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion>();
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one InstruccionIntermediasReferencesInstruccion link between a given InstruccionIntermediasand a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion GetLink( global::CE.DGH_DGC_SOM_IKP.InstruccionIntermedias source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainRelationship ConjInstrHasInicioPrograma
+	/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("25ca2e86-0679-4f35-9d01-535d3fa013b0")]
+	public partial class ConjInstrHasInicioPrograma : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ConjInstrHasInicioPrograma domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x25ca2e86, 0x0679, 0x4f35, 0x9d, 0x01, 0x53, 0x5d, 0x3f, 0xa0, 0x13, 0xb0);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ConjInstrHasInicioPrograma link in the same Partition as the given ConjInstr
+		/// </summary>
+		/// <param name="source">ConjInstr to use as the source of the relationship.</param>
+		/// <param name="target">InicioPrograma to use as the target of the relationship.</param>
+		public ConjInstrHasInicioPrograma(ConjInstr source, InicioPrograma target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ConjInstrHasInicioPrograma.ConjInstrDomainRoleId, source), new DslModeling::RoleAssignment(ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConjInstrHasInicioPrograma(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConjInstrHasInicioPrograma(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConjInstrHasInicioPrograma(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConjInstrHasInicioPrograma(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ConjInstr domain role code
+		
+		/// <summary>
+		/// ConjInstr domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ConjInstrDomainRoleId = new global::System.Guid(0x80f51714, 0xc7da, 0x4e78, 0x9e, 0x40, 0xb4, 0x1b, 0x86, 0xf2, 0xf2, 0xc8);
+		
+		/// <summary>
+		/// DomainRole ConjInstr
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstr
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "InicioPrograma", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("80f51714-c7da-4e78-9e40-b41b86f2f2c8")]
+		public virtual ConjInstr ConjInstr
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ConjInstr)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConjInstrDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConjInstrDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ConjInstr of a InicioPrograma
+		/// <summary>
+		/// Gets ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ConjInstr GetConjInstr(InicioPrograma element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InicioProgramaDomainRoleId) as ConjInstr;
+		}
+		
+		/// <summary>
+		/// Sets ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetConjInstr(InicioPrograma element, ConjInstr newConjInstr)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InicioProgramaDomainRoleId, newConjInstr);
+		}
+		#endregion
+		#region InicioPrograma domain role code
+		
+		/// <summary>
+		/// InicioPrograma domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InicioProgramaDomainRoleId = new global::System.Guid(0xf29e4215, 0x3d4e, 0x4f81, 0x92, 0xda, 0x2a, 0x3a, 0xa2, 0x08, 0xc3, 0xb2);
+		
+		/// <summary>
+		/// DomainRole InicioPrograma
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioPrograma
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ConjInstr", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("f29e4215-3d4e-4f81-92da-2a3aa208c3b2")]
+		public virtual InicioPrograma InicioPrograma
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (InicioPrograma)DslModeling::DomainRoleInfo.GetRolePlayer(this, InicioProgramaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InicioProgramaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access InicioPrograma of a ConjInstr
+		/// <summary>
+		/// Gets InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static InicioPrograma GetInicioPrograma(ConjInstr element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ConjInstrDomainRoleId) as InicioPrograma;
+		}
+		
+		/// <summary>
+		/// Sets InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetInicioPrograma(ConjInstr element, InicioPrograma newInicioPrograma)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ConjInstrDomainRoleId, newInicioPrograma);
+		}
+		#endregion
+		#region ConjInstr link accessor
+		/// <summary>
+		/// Get the ConjInstrHasInicioPrograma link to a ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma GetLinkToInicioPrograma (global::CE.DGH_DGC_SOM_IKP.ConjInstr conjInstrInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma>(conjInstrInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ConjInstr not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region InicioPrograma link accessor
+		/// <summary>
+		/// Get the ConjInstrHasInicioPrograma link to a InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma GetLinkToConjInstr (global::CE.DGH_DGC_SOM_IKP.InicioPrograma inicioProgramaInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma>(inicioProgramaInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of InicioPrograma not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ConjInstrHasInicioPrograma instance accessors
+		
+		/// <summary>
+		/// Get any ConjInstrHasInicioPrograma links between a given ConjInstr and a InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> GetLinks( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.InicioPrograma target )
+		{
+			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma>();
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma link in links )
+			{
+				if ( target.Equals(link.InicioPrograma) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ConjInstrHasInicioPrograma link between a given ConjInstrand a InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma GetLink( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.InicioPrograma target )
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma link in links )
+			{
+				if ( target.Equals(link.InicioPrograma) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainRelationship ConjInstrHasInstruccion
+	/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("b5d44492-49a8-4a97-9aa7-0c55c91c5350")]
+	public partial class ConjInstrHasInstruccion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ConjInstrHasInstruccion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb5d44492, 0x49a8, 0x4a97, 0x9a, 0xa7, 0x0c, 0x55, 0xc9, 0x1c, 0x53, 0x50);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ConjInstrHasInstruccion link in the same Partition as the given ConjInstr
+		/// </summary>
+		/// <param name="source">ConjInstr to use as the source of the relationship.</param>
+		/// <param name="target">Instruccion to use as the target of the relationship.</param>
+		public ConjInstrHasInstruccion(ConjInstr source, Instruccion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ConjInstrHasInstruccion.ConjInstrDomainRoleId, source), new DslModeling::RoleAssignment(ConjInstrHasInstruccion.InstruccionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConjInstrHasInstruccion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConjInstrHasInstruccion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConjInstrHasInstruccion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConjInstrHasInstruccion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ConjInstr domain role code
+		
+		/// <summary>
+		/// ConjInstr domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ConjInstrDomainRoleId = new global::System.Guid(0xa1b635c5, 0xad8e, 0x4a75, 0x9e, 0xc0, 0x50, 0xa5, 0xd3, 0x0a, 0x6c, 0x51);
+		
+		/// <summary>
+		/// DomainRole ConjInstr
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Instruccion", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("a1b635c5-ad8e-4a75-9ec0-50a5d30a6c51")]
+		public virtual ConjInstr ConjInstr
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ConjInstr)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConjInstrDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConjInstrDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ConjInstr of a Instruccion
+		/// <summary>
+		/// Gets ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ConjInstr GetConjInstr(Instruccion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as ConjInstr;
+		}
+		
+		/// <summary>
+		/// Sets ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetConjInstr(Instruccion element, ConjInstr newConjInstr)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newConjInstr);
+		}
+		#endregion
+		#region Instruccion domain role code
+		
+		/// <summary>
+		/// Instruccion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0xaa3c8688, 0xa210, 0x4d20, 0xb5, 0xe3, 0x77, 0xd0, 0x78, 0xf6, 0xec, 0x40);
+		
+		/// <summary>
+		/// DomainRole Instruccion
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ConjInstr", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("aa3c8688-a210-4d20-b5e3-77d078f6ec40")]
+		public virtual Instruccion Instruccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Instruccion of a ConjInstr
+		/// <summary>
+		/// Gets a list of Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Instruccion> GetInstruccion(ConjInstr element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Instruccion>, Instruccion>(element, ConjInstrDomainRoleId);
+		}
+		#endregion
+		#region ConjInstr link accessor
+		/// <summary>
+		/// Get the list of ConjInstrHasInstruccion links to a ConjInstr.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> GetLinksToInstruccion ( global::CE.DGH_DGC_SOM_IKP.ConjInstr conjInstrInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(conjInstrInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
+		}
+		#endregion
+		#region Instruccion link accessor
+		/// <summary>
+		/// Get the ConjInstrHasInstruccion link to a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion GetLinkToConjInstr (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ConjInstrHasInstruccion instance accessors
+		
+		/// <summary>
+		/// Get any ConjInstrHasInstruccion links between a given ConjInstr and a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> GetLinks( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>();
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ConjInstrHasInstruccion link between a given ConjInstrand a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion GetLink( global::CE.DGH_DGC_SOM_IKP.ConjInstr source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainRelationship InicioProgramaReferencesInstruccion
+	/// Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("c163744b-253f-43a1-af13-6ed550543714")]
+	public partial class InicioProgramaReferencesInstruccion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// InicioProgramaReferencesInstruccion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc163744b, 0x253f, 0x43a1, 0xaf, 0x13, 0x6e, 0xd5, 0x50, 0x54, 0x37, 0x14);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a InicioProgramaReferencesInstruccion link in the same Partition as the given InicioPrograma
+		/// </summary>
+		/// <param name="source">InicioPrograma to use as the source of the relationship.</param>
+		/// <param name="target">Instruccion to use as the target of the relationship.</param>
+		public InicioProgramaReferencesInstruccion(InicioPrograma source, Instruccion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId, source), new DslModeling::RoleAssignment(InicioProgramaReferencesInstruccion.InstruccionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public InicioProgramaReferencesInstruccion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public InicioProgramaReferencesInstruccion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public InicioProgramaReferencesInstruccion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public InicioProgramaReferencesInstruccion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region InicioPrograma domain role code
+		
+		/// <summary>
+		/// InicioPrograma domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InicioProgramaDomainRoleId = new global::System.Guid(0xbda656a8, 0xc59e, 0x4dca, 0xa2, 0xb4, 0x2e, 0x62, 0xcc, 0x7a, 0x6f, 0x5c);
+		
+		/// <summary>
+		/// DomainRole InicioPrograma
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioPrograma
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Instruccion", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("bda656a8-c59e-4dca-a2b4-2e62cc7a6f5c")]
+		public virtual InicioPrograma InicioPrograma
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (InicioPrograma)DslModeling::DomainRoleInfo.GetRolePlayer(this, InicioProgramaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InicioProgramaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access InicioPrograma of a Instruccion
+		/// <summary>
+		/// Gets InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static InicioPrograma GetInicioPrograma(Instruccion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InstruccionDomainRoleId) as InicioPrograma;
+		}
+		
+		/// <summary>
+		/// Sets InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetInicioPrograma(Instruccion element, InicioPrograma newInicioPrograma)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InstruccionDomainRoleId, newInicioPrograma);
+		}
+		#endregion
+		#region Instruccion domain role code
+		
+		/// <summary>
+		/// Instruccion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid InstruccionDomainRoleId = new global::System.Guid(0x9523f804, 0x2d37, 0x4e89, 0x9d, 0x04, 0xa2, 0xb7, 0xb9, 0x05, 0x44, 0x0b);
+		
+		/// <summary>
+		/// DomainRole Instruccion
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Instruccion
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "InicioPrograma", PropertyDisplayNameKey="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("9523f804-2d37-4e89-9d04-a2b7b905440b")]
+		public virtual Instruccion Instruccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Instruccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, InstruccionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, InstruccionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Instruccion of a InicioPrograma
+		/// <summary>
+		/// Gets Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Instruccion GetInstruccion(InicioPrograma element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, InicioProgramaDomainRoleId) as Instruccion;
+		}
+		
+		/// <summary>
+		/// Sets Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetInstruccion(InicioPrograma element, Instruccion newInstruccion)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, InicioProgramaDomainRoleId, newInstruccion);
+		}
+		#endregion
+		#region InicioPrograma link accessor
+		/// <summary>
+		/// Get the InicioProgramaReferencesInstruccion link to a InicioPrograma.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion GetLinkToInstruccion (global::CE.DGH_DGC_SOM_IKP.InicioPrograma inicioProgramaInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion>(inicioProgramaInstance, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of InicioPrograma not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Instruccion link accessor
+		/// <summary>
+		/// Get the InicioProgramaReferencesInstruccion link to a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion GetLinkToInicioPrograma (global::CE.DGH_DGC_SOM_IKP.Instruccion instruccionInstance)
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion>(instruccionInstance, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InstruccionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Instruccion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region InicioProgramaReferencesInstruccion instance accessors
+		
+		/// <summary>
+		/// Get any InicioProgramaReferencesInstruccion links between a given InicioPrograma and a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> GetLinks( global::CE.DGH_DGC_SOM_IKP.InicioPrograma source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> outLinks = new global::System.Collections.Generic.List<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion>();
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one InicioProgramaReferencesInstruccion link between a given InicioProgramaand a Instruccion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion GetLink( global::CE.DGH_DGC_SOM_IKP.InicioPrograma source, global::CE.DGH_DGC_SOM_IKP.Instruccion target )
+		{
+			global::System.Collections.Generic.IList<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion>(source, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId);
+			foreach ( global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion link in links )
+			{
+				if ( target.Equals(link.Instruccion) )
 				{
 					return link;
 				}

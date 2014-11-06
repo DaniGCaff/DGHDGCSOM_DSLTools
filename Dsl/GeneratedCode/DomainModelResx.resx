@@ -149,13 +149,13 @@
     <value>Conj Instr</value>
     <comment>DisplayName for DomainClass &apos;ConjInstr&apos;</comment>
   </data>
-  <data name="CE.DGH_DGC_SOM_IKP.Instruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.Instruccion</value>
-    <comment>Description for DomainClass &apos;Instruccion&apos;</comment>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermedias.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermedias</value>
+    <comment>Description for DomainClass &apos;InstruccionIntermedias&apos;</comment>
   </data>
-  <data name="CE.DGH_DGC_SOM_IKP.Instruccion.DisplayName" xml:space="preserve">
-    <value>Instruccion</value>
-    <comment>DisplayName for DomainClass &apos;Instruccion&apos;</comment>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermedias.DisplayName" xml:space="preserve">
+    <value>Instruccion Intermedias</value>
+    <comment>DisplayName for DomainClass &apos;InstruccionIntermedias&apos;</comment>
   </data>
   <data name="CE.DGH_DGC_SOM_IKP.InsRepetir.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.InsRepetir</value>
@@ -213,6 +213,30 @@
     <value>Subprograma</value>
     <comment>DisplayName for DomainClass &apos;Subprograma&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.Instruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.Instruccion</value>
+    <comment>Description for DomainClass &apos;Instruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.Instruccion.DisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>DisplayName for DomainClass &apos;Instruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsFin.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsFin</value>
+    <comment>Description for DomainClass &apos;InsFin&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsFin.DisplayName" xml:space="preserve">
+    <value>Ins Fin</value>
+    <comment>DisplayName for DomainClass &apos;InsFin&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioPrograma.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InicioPrograma</value>
+    <comment>Description for DomainClass &apos;InicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioPrograma.DisplayName" xml:space="preserve">
+    <value>Inicio Programa</value>
+    <comment>DisplayName for DomainClass &apos;InicioPrograma&apos;</comment>
+  </data>
   <data name="CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen</value>
     <comment>Description for DomainClass &apos;AplicacionIPKHasImagen&apos;</comment>
@@ -244,134 +268,6 @@
   <data name="CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen/Imagen.PropertyDisplayName" xml:space="preserve">
     <value>Aplicacion IPK</value>
     <comment>PropertyDisplayName for DomainRole &apos;Imagen&apos; on DomainRelationship &apos;AplicacionIPKHasImagen&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion</value>
-    <comment>Description for DomainClass &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.DisplayName" xml:space="preserve">
-    <value>Conj Instr Has Instruccion</value>
-    <comment>DisplayName for DomainClass &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr</value>
-    <comment>Description for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.DisplayName" xml:space="preserve">
-    <value>Conj Instr</value>
-    <comment>DisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.PropertyDisplayName" xml:space="preserve">
-    <value>Instruccion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion</value>
-    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.DisplayName" xml:space="preserve">
-    <value>Instruccion</value>
-    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.PropertyDisplayName" xml:space="preserve">
-    <value>Conj Instr</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial</value>
-    <comment>Description for DomainClass &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.DisplayName" xml:space="preserve">
-    <value>Programa References Instruccion Inicial</value>
-    <comment>DisplayName for DomainClass &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstr</value>
-    <comment>Description for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.DisplayName" xml:space="preserve">
-    <value>Conj Instr</value>
-    <comment>DisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/ConjInstr.PropertyDisplayName" xml:space="preserve">
-    <value>Instruccion Inicial</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Instruccion</value>
-    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.DisplayName" xml:space="preserve">
-    <value>Instruccion</value>
-    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial/Instruccion.PropertyDisplayName" xml:space="preserve">
-    <value>Programa A</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionInicial&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal</value>
-    <comment>Description for DomainClass &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.DisplayName" xml:space="preserve">
-    <value>Programa References Instruccion Final</value>
-    <comment>DisplayName for DomainClass &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstr</value>
-    <comment>Description for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.DisplayName" xml:space="preserve">
-    <value>Conj Instr</value>
-    <comment>DisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/ConjInstr.PropertyDisplayName" xml:space="preserve">
-    <value>Instruccion Final</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Instruccion</value>
-    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.DisplayName" xml:space="preserve">
-    <value>Instruccion</value>
-    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal/Instruccion.PropertyDisplayName" xml:space="preserve">
-    <value>Programa B</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ProgramaReferencesInstruccionFinal&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente</value>
-    <comment>Description for DomainClass &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.DisplayName" xml:space="preserve">
-    <value>Instruccion Referencessiguiente</value>
-    <comment>DisplayName for DomainClass &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccion</value>
-    <comment>Description for DomainRole &apos;SourceInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.DisplayName" xml:space="preserve">
-    <value>Source Instruccion</value>
-    <comment>DisplayName for DomainRole &apos;SourceInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/SourceInstruccion.PropertyDisplayName" xml:space="preserve">
-    <value>Siguiente</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SourceInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.Description" xml:space="preserve">
-    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccion</value>
-    <comment>Description for DomainRole &apos;TargetInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.DisplayName" xml:space="preserve">
-    <value>Target Instruccion</value>
-    <comment>DisplayName for DomainRole &apos;TargetInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
-  </data>
-  <data name="CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente/TargetInstruccion.PropertyDisplayName" xml:space="preserve">
-    <value>Anterior</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TargetInstruccion&apos; on DomainRelationship &apos;InstruccionReferencessiguiente&apos;</comment>
   </data>
   <data name="CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.ImagenReferencesPrograma</value>
@@ -469,6 +365,166 @@
     <value>Aplicacion IPK</value>
     <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;AplicacionIPKHasConjInstr&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion</value>
+    <comment>Description for DomainClass &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.DisplayName" xml:space="preserve">
+    <value>Instruccion Intermedias References Instruccion</value>
+    <comment>DisplayName for DomainClass &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermedias</value>
+    <comment>Description for DomainRole &apos;InstruccionIntermedias&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.DisplayName" xml:space="preserve">
+    <value>Instruccion Intermedias</value>
+    <comment>DisplayName for DomainRole &apos;InstruccionIntermedias&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/InstruccionIntermedias.PropertyDisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;InstruccionIntermedias&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Instruccion</value>
+    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.DisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion/Instruccion.PropertyDisplayName" xml:space="preserve">
+    <value>Instruccion Intermedias</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InstruccionIntermediasReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma</value>
+    <comment>Description for DomainClass &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.DisplayName" xml:space="preserve">
+    <value>Conj Instr Has Inicio Programa</value>
+    <comment>DisplayName for DomainClass &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstr</value>
+    <comment>Description for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.DisplayName" xml:space="preserve">
+    <value>Conj Instr</value>
+    <comment>DisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/ConjInstr.PropertyDisplayName" xml:space="preserve">
+    <value>Inicio Programa</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioPrograma</value>
+    <comment>Description for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.DisplayName" xml:space="preserve">
+    <value>Inicio Programa</value>
+    <comment>DisplayName for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma/InicioPrograma.PropertyDisplayName" xml:space="preserve">
+    <value>Conj Instr</value>
+    <comment>PropertyDisplayName for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;ConjInstrHasInicioPrograma&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion</value>
+    <comment>Description for DomainClass &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.DisplayName" xml:space="preserve">
+    <value>Conj Instr Has Instruccion</value>
+    <comment>DisplayName for DomainClass &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr</value>
+    <comment>Description for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.DisplayName" xml:space="preserve">
+    <value>Conj Instr</value>
+    <comment>DisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/ConjInstr.PropertyDisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConjInstr&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion</value>
+    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.DisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion/Instruccion.PropertyDisplayName" xml:space="preserve">
+    <value>Conj Instr</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;ConjInstrHasInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion</value>
+    <comment>Description for DomainClass &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.DisplayName" xml:space="preserve">
+    <value>Inicio Programa References Instruccion</value>
+    <comment>DisplayName for DomainClass &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioPrograma</value>
+    <comment>Description for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.DisplayName" xml:space="preserve">
+    <value>Inicio Programa</value>
+    <comment>DisplayName for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/InicioPrograma.PropertyDisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;InicioPrograma&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Instruccion</value>
+    <comment>Description for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.DisplayName" xml:space="preserve">
+    <value>Instruccion</value>
+    <comment>DisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion/Instruccion.PropertyDisplayName" xml:space="preserve">
+    <value>Inicio Programa</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Instruccion&apos; on DomainRelationship &apos;InicioProgramaReferencesInstruccion&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Norte.DisplayName" xml:space="preserve">
+    <value>Norte</value>
+    <comment>Display name for EnumerationLiteral &apos;Norte&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Norte.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Norte</value>
+    <comment>Description for EnumerationLiteral &apos;Norte&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Sur.DisplayName" xml:space="preserve">
+    <value>Sur</value>
+    <comment>Display name for EnumerationLiteral &apos;Sur&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Sur.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Sur</value>
+    <comment>Description for EnumerationLiteral &apos;Sur&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Este.DisplayName" xml:space="preserve">
+    <value>Este</value>
+    <comment>Display name for EnumerationLiteral &apos;Este&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Este.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Este</value>
+    <comment>Description for EnumerationLiteral &apos;Este&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Oeste.DisplayName" xml:space="preserve">
+    <value>Oeste</value>
+    <comment>Display name for EnumerationLiteral &apos;Oeste&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.PosicionEnum/Oeste.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Oeste</value>
+    <comment>Description for EnumerationLiteral &apos;Oeste&apos; on DomainEnumeration &apos;PosicionEnum&apos;</comment>
+  </data>
   <data name="CE.DGH_DGC_SOM_IKP.ImageShape1.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.ImageShape1</value>
     <comment>Description for DomainClass &apos;ImageShape1&apos;</comment>
@@ -477,6 +533,14 @@
     <value>Image Shape1</value>
     <comment>DisplayName for DomainClass &apos;ImageShape1&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ImageShape1/DomainProperty1.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.ImageShape1.Domain Property1</value>
+    <comment>Description for DomainProperty &apos;DomainProperty1&apos; on DomainClass &apos;ImageShape1&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.ImageShape1/DomainProperty1.DisplayName" xml:space="preserve">
+    <value>Domain Property1</value>
+    <comment>DisplayName for DomainProperty &apos;DomainProperty1&apos; on DomainClass &apos;ImageShape1&apos;</comment>
+  </data>
   <data name="CE.DGH_DGC_SOM_IKP.InsFijarG.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.InsFijarG</value>
     <comment>Description for DomainClass &apos;InsFijarG&apos;</comment>
@@ -484,6 +548,14 @@
   <data name="CE.DGH_DGC_SOM_IKP.InsFijarG.DisplayName" xml:space="preserve">
     <value>Ins Fijar G</value>
     <comment>DisplayName for DomainClass &apos;InsFijarG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsFijarG/Porcentaje.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsFijarG.Porcentaje</value>
+    <comment>Description for DomainProperty &apos;Porcentaje&apos; on DomainClass &apos;InsFijarG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsFijarG/Porcentaje.DisplayName" xml:space="preserve">
+    <value>Porcentaje</value>
+    <comment>DisplayName for DomainProperty &apos;Porcentaje&apos; on DomainClass &apos;InsFijarG&apos;</comment>
   </data>
   <data name="InsFijarGFijarDefaultText" xml:space="preserve">
     <value>Fijar</value>
@@ -497,6 +569,14 @@
     <value>Ins Apuntar G</value>
     <comment>DisplayName for DomainClass &apos;InsApuntarG&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsApuntarG/Direccion.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsApuntarG.Direccion</value>
+    <comment>Description for DomainProperty &apos;Direccion&apos; on DomainClass &apos;InsApuntarG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsApuntarG/Direccion.DisplayName" xml:space="preserve">
+    <value>Direccion</value>
+    <comment>DisplayName for DomainProperty &apos;Direccion&apos; on DomainClass &apos;InsApuntarG&apos;</comment>
+  </data>
   <data name="InsApuntarGApuntarDefaultText" xml:space="preserve">
     <value>Apuntar</value>
     <comment>Text decorator default text</comment>
@@ -508,6 +588,14 @@
   <data name="CE.DGH_DGC_SOM_IKP.InsRepetirG.DisplayName" xml:space="preserve">
     <value>Ins Repetir G</value>
     <comment>DisplayName for DomainClass &apos;InsRepetirG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsRepetirG/Veces.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsRepetirG.Veces</value>
+    <comment>Description for DomainProperty &apos;Veces&apos; on DomainClass &apos;InsRepetirG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsRepetirG/Veces.DisplayName" xml:space="preserve">
+    <value>Veces</value>
+    <comment>DisplayName for DomainProperty &apos;Veces&apos; on DomainClass &apos;InsRepetirG&apos;</comment>
   </data>
   <data name="InsRepetirGRepetirDefaultText" xml:space="preserve">
     <value>Repetir</value>
@@ -529,6 +617,22 @@
     <value>Ins Posicion G</value>
     <comment>DisplayName for DomainClass &apos;InsPosicionG&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsPosicionG/X.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.X</value>
+    <comment>Description for DomainProperty &apos;X&apos; on DomainClass &apos;InsPosicionG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsPosicionG/X.DisplayName" xml:space="preserve">
+    <value>X</value>
+    <comment>DisplayName for DomainProperty &apos;X&apos; on DomainClass &apos;InsPosicionG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsPosicionG/Y.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.Y</value>
+    <comment>Description for DomainProperty &apos;Y&apos; on DomainClass &apos;InsPosicionG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsPosicionG/Y.DisplayName" xml:space="preserve">
+    <value>Y</value>
+    <comment>DisplayName for DomainProperty &apos;Y&apos; on DomainClass &apos;InsPosicionG&apos;</comment>
+  </data>
   <data name="InsPosicionGIr a posicionDefaultText" xml:space="preserve">
     <value>Ir a posicion</value>
     <comment>Text decorator default text</comment>
@@ -541,6 +645,14 @@
     <value>Ins Mover G</value>
     <comment>DisplayName for DomainClass &apos;InsMoverG&apos;</comment>
   </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsMoverG/Pasos.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InsMoverG.Pasos</value>
+    <comment>Description for DomainProperty &apos;Pasos&apos; on DomainClass &apos;InsMoverG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InsMoverG/Pasos.DisplayName" xml:space="preserve">
+    <value>Pasos</value>
+    <comment>DisplayName for DomainProperty &apos;Pasos&apos; on DomainClass &apos;InsMoverG&apos;</comment>
+  </data>
   <data name="InsMoverGMover pasosDefaultText" xml:space="preserve">
     <value>Mover pasos</value>
     <comment>Text decorator default text</comment>
@@ -552,6 +664,22 @@
   <data name="CE.DGH_DGC_SOM_IKP.SubprogramaG.DisplayName" xml:space="preserve">
     <value>Subprograma G</value>
     <comment>DisplayName for DomainClass &apos;SubprogramaG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioG.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.InicioG</value>
+    <comment>Description for DomainClass &apos;InicioG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.InicioG.DisplayName" xml:space="preserve">
+    <value>Inicio G</value>
+    <comment>DisplayName for DomainClass &apos;InicioG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.FinG.Description" xml:space="preserve">
+    <value>Description for CE.DGH_DGC_SOM_IKP.FinG</value>
+    <comment>Description for DomainClass &apos;FinG&apos;</comment>
+  </data>
+  <data name="CE.DGH_DGC_SOM_IKP.FinG.DisplayName" xml:space="preserve">
+    <value>Fin G</value>
+    <comment>DisplayName for DomainClass &apos;FinG&apos;</comment>
   </data>
   <data name="CE.DGH_DGC_SOM_IKP.InicialG.Description" xml:space="preserve">
     <value>Description for CE.DGH_DGC_SOM_IKP.InicialG</value>
@@ -653,22 +781,6 @@
     <value>Fijar Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="InicialToolToolboxItem" xml:space="preserve">
-    <value>InicialTool</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="InicialToolToolboxTooltip" xml:space="preserve">
-    <value>Inicial Tool</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="FinalToolToolboxItem" xml:space="preserve">
-    <value>FinalTool</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="FinalToolToolboxTooltip" xml:space="preserve">
-    <value>Final Tool</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="OrdenToolToolboxItem" xml:space="preserve">
     <value>OrdenTool</value>
     <comment>Toolbox item name</comment>
@@ -715,6 +827,30 @@
   </data>
   <data name="SubprogramaToolToolboxTooltip" xml:space="preserve">
     <value>Subprograma Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="InicioToolToolboxItem" xml:space="preserve">
+    <value>InicioTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="InicioToolToolboxTooltip" xml:space="preserve">
+    <value>Inicio Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="FinToolToolboxItem" xml:space="preserve">
+    <value>FinTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="FinToolToolboxTooltip" xml:space="preserve">
+    <value>Fin Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="PrimeraInstruccionToolboxItem" xml:space="preserve">
+    <value>PrimeraInstruccion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="PrimeraInstruccionToolboxTooltip" xml:space="preserve">
+    <value>Primera Instruccion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -866,14 +1002,6 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\programa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="InicialToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\imagen.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="FinalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\imagen.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="OrdenToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\imagen.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -896,6 +1024,18 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="SubprogramaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\programa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="InicioToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\imagen.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="FinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\programa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="PrimeraInstruccionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\imagen.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

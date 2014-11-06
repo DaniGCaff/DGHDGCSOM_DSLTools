@@ -70,7 +70,7 @@ namespace CE.DGH_DGC_SOM_IKP
 				typeof(AplicacionIPK),
 				typeof(Imagen),
 				typeof(ConjInstr),
-				typeof(Instruccion),
+				typeof(InstruccionIntermedias),
 				typeof(InsRepetir),
 				typeof(InsFijar),
 				typeof(InsApuntar),
@@ -78,14 +78,17 @@ namespace CE.DGH_DGC_SOM_IKP
 				typeof(InsMover),
 				typeof(Programa),
 				typeof(Subprograma),
+				typeof(Instruccion),
+				typeof(InsFin),
+				typeof(InicioPrograma),
 				typeof(AplicacionIPKHasImagen),
-				typeof(ConjInstrHasInstruccion),
-				typeof(ProgramaReferencesInstruccionInicial),
-				typeof(ProgramaReferencesInstruccionFinal),
-				typeof(InstruccionReferencessiguiente),
 				typeof(ImagenReferencesPrograma),
 				typeof(InsRepetirReferencesSubprograma),
 				typeof(AplicacionIPKHasConjInstr),
+				typeof(InstruccionIntermediasReferencesInstruccion),
+				typeof(ConjInstrHasInicioPrograma),
+				typeof(ConjInstrHasInstruccion),
+				typeof(InicioProgramaReferencesInstruccion),
 				typeof(DGH_DGC_SOM_IKPDiagram),
 				typeof(InicialG),
 				typeof(FinalG),
@@ -99,6 +102,8 @@ namespace CE.DGH_DGC_SOM_IKP
 				typeof(InsPosicionG),
 				typeof(InsMoverG),
 				typeof(SubprogramaG),
+				typeof(InicioG),
+				typeof(FinG),
 				typeof(ImageShape1),
 				typeof(global::CE.DGH_DGC_SOM_IKP.FixUpDiagram),
 				typeof(global::CE.DGH_DGC_SOM_IKP.ConnectorRolePlayerChanged),
@@ -113,6 +118,13 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 			return new DomainMemberInfo[]
 			{
+				new DomainMemberInfo(typeof(InsFijarG), "Porcentaje", InsFijarG.PorcentajeDomainPropertyId, typeof(InsFijarG.PorcentajePropertyHandler)),
+				new DomainMemberInfo(typeof(InsApuntarG), "Direccion", InsApuntarG.DireccionDomainPropertyId, typeof(InsApuntarG.DireccionPropertyHandler)),
+				new DomainMemberInfo(typeof(InsRepetirG), "Veces", InsRepetirG.VecesDomainPropertyId, typeof(InsRepetirG.VecesPropertyHandler)),
+				new DomainMemberInfo(typeof(InsPosicionG), "X", InsPosicionG.XDomainPropertyId, typeof(InsPosicionG.XPropertyHandler)),
+				new DomainMemberInfo(typeof(InsPosicionG), "Y", InsPosicionG.YDomainPropertyId, typeof(InsPosicionG.YPropertyHandler)),
+				new DomainMemberInfo(typeof(InsMoverG), "Pasos", InsMoverG.PasosDomainPropertyId, typeof(InsMoverG.PasosPropertyHandler)),
+				new DomainMemberInfo(typeof(ImageShape1), "DomainProperty1", ImageShape1.DomainProperty1DomainPropertyId, typeof(ImageShape1.DomainProperty1PropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -125,20 +137,20 @@ namespace CE.DGH_DGC_SOM_IKP
 			{
 				new DomainRolePlayerInfo(typeof(AplicacionIPKHasImagen), "AplicacionIPK", AplicacionIPKHasImagen.AplicacionIPKDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AplicacionIPKHasImagen), "Imagen", AplicacionIPKHasImagen.ImagenDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ConjInstrHasInstruccion), "ConjInstr", ConjInstrHasInstruccion.ConjInstrDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ConjInstrHasInstruccion), "Instruccion", ConjInstrHasInstruccion.InstruccionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ProgramaReferencesInstruccionInicial), "ConjInstr", ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ProgramaReferencesInstruccionInicial), "Instruccion", ProgramaReferencesInstruccionInicial.InstruccionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ProgramaReferencesInstruccionFinal), "ConjInstr", ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ProgramaReferencesInstruccionFinal), "Instruccion", ProgramaReferencesInstruccionFinal.InstruccionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(InstruccionReferencessiguiente), "SourceInstruccion", InstruccionReferencessiguiente.SourceInstruccionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(InstruccionReferencessiguiente), "TargetInstruccion", InstruccionReferencessiguiente.TargetInstruccionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ImagenReferencesPrograma), "Imagen", ImagenReferencesPrograma.ImagenDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ImagenReferencesPrograma), "Programa", ImagenReferencesPrograma.ProgramaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(InsRepetirReferencesSubprograma), "InsRepetir", InsRepetirReferencesSubprograma.InsRepetirDomainRoleId),
 				new DomainRolePlayerInfo(typeof(InsRepetirReferencesSubprograma), "Subprograma", InsRepetirReferencesSubprograma.SubprogramaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AplicacionIPKHasConjInstr), "AplicacionIPK", AplicacionIPKHasConjInstr.AplicacionIPKDomainRoleId),
 				new DomainRolePlayerInfo(typeof(AplicacionIPKHasConjInstr), "ConjInstr", AplicacionIPKHasConjInstr.ConjInstrDomainRoleId),
+				new DomainRolePlayerInfo(typeof(InstruccionIntermediasReferencesInstruccion), "InstruccionIntermedias", InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId),
+				new DomainRolePlayerInfo(typeof(InstruccionIntermediasReferencesInstruccion), "Instruccion", InstruccionIntermediasReferencesInstruccion.InstruccionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConjInstrHasInicioPrograma), "ConjInstr", ConjInstrHasInicioPrograma.ConjInstrDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConjInstrHasInicioPrograma), "InicioPrograma", ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConjInstrHasInstruccion), "ConjInstr", ConjInstrHasInstruccion.ConjInstrDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConjInstrHasInstruccion), "Instruccion", ConjInstrHasInstruccion.InstruccionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(InicioProgramaReferencesInstruccion), "InicioPrograma", InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(InicioProgramaReferencesInstruccion), "Instruccion", InicioProgramaReferencesInstruccion.InstruccionDomainRoleId),
 			};
 		}
 		#endregion
@@ -160,7 +172,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(25);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(30);
 				createElementMap.Add(typeof(AplicacionIPK), 0);
 				createElementMap.Add(typeof(Imagen), 1);
 				createElementMap.Add(typeof(InsRepetir), 2);
@@ -170,20 +182,24 @@ namespace CE.DGH_DGC_SOM_IKP
 				createElementMap.Add(typeof(InsMover), 6);
 				createElementMap.Add(typeof(Programa), 7);
 				createElementMap.Add(typeof(Subprograma), 8);
-				createElementMap.Add(typeof(DGH_DGC_SOM_IKPDiagram), 9);
-				createElementMap.Add(typeof(InicialG), 10);
-				createElementMap.Add(typeof(FinalG), 11);
-				createElementMap.Add(typeof(OrdenG), 12);
-				createElementMap.Add(typeof(ProgramaImagen), 13);
-				createElementMap.Add(typeof(RepetirSubprogramaG), 14);
-				createElementMap.Add(typeof(InsFijarG), 15);
-				createElementMap.Add(typeof(InsApuntarG), 16);
-				createElementMap.Add(typeof(InsRepetirG), 17);
-				createElementMap.Add(typeof(ProgramaG), 18);
-				createElementMap.Add(typeof(InsPosicionG), 19);
-				createElementMap.Add(typeof(InsMoverG), 20);
-				createElementMap.Add(typeof(SubprogramaG), 21);
-				createElementMap.Add(typeof(ImageShape1), 22);
+				createElementMap.Add(typeof(InsFin), 9);
+				createElementMap.Add(typeof(InicioPrograma), 10);
+				createElementMap.Add(typeof(DGH_DGC_SOM_IKPDiagram), 11);
+				createElementMap.Add(typeof(InicialG), 12);
+				createElementMap.Add(typeof(FinalG), 13);
+				createElementMap.Add(typeof(OrdenG), 14);
+				createElementMap.Add(typeof(ProgramaImagen), 15);
+				createElementMap.Add(typeof(RepetirSubprogramaG), 16);
+				createElementMap.Add(typeof(InsFijarG), 17);
+				createElementMap.Add(typeof(InsApuntarG), 18);
+				createElementMap.Add(typeof(InsRepetirG), 19);
+				createElementMap.Add(typeof(ProgramaG), 20);
+				createElementMap.Add(typeof(InsPosicionG), 21);
+				createElementMap.Add(typeof(InsMoverG), 22);
+				createElementMap.Add(typeof(SubprogramaG), 23);
+				createElementMap.Add(typeof(InicioG), 24);
+				createElementMap.Add(typeof(FinG), 25);
+				createElementMap.Add(typeof(ImageShape1), 26);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -206,20 +222,24 @@ namespace CE.DGH_DGC_SOM_IKP
 				case 6: return new InsMover(partition, propertyAssignments);
 				case 7: return new Programa(partition, propertyAssignments);
 				case 8: return new Subprograma(partition, propertyAssignments);
-				case 9: return new DGH_DGC_SOM_IKPDiagram(partition, propertyAssignments);
-				case 10: return new InicialG(partition, propertyAssignments);
-				case 11: return new FinalG(partition, propertyAssignments);
-				case 12: return new OrdenG(partition, propertyAssignments);
-				case 13: return new ProgramaImagen(partition, propertyAssignments);
-				case 14: return new RepetirSubprogramaG(partition, propertyAssignments);
-				case 15: return new InsFijarG(partition, propertyAssignments);
-				case 16: return new InsApuntarG(partition, propertyAssignments);
-				case 17: return new InsRepetirG(partition, propertyAssignments);
-				case 18: return new ProgramaG(partition, propertyAssignments);
-				case 19: return new InsPosicionG(partition, propertyAssignments);
-				case 20: return new InsMoverG(partition, propertyAssignments);
-				case 21: return new SubprogramaG(partition, propertyAssignments);
-				case 22: return new ImageShape1(partition, propertyAssignments);
+				case 9: return new InsFin(partition, propertyAssignments);
+				case 10: return new InicioPrograma(partition, propertyAssignments);
+				case 11: return new DGH_DGC_SOM_IKPDiagram(partition, propertyAssignments);
+				case 12: return new InicialG(partition, propertyAssignments);
+				case 13: return new FinalG(partition, propertyAssignments);
+				case 14: return new OrdenG(partition, propertyAssignments);
+				case 15: return new ProgramaImagen(partition, propertyAssignments);
+				case 16: return new RepetirSubprogramaG(partition, propertyAssignments);
+				case 17: return new InsFijarG(partition, propertyAssignments);
+				case 18: return new InsApuntarG(partition, propertyAssignments);
+				case 19: return new InsRepetirG(partition, propertyAssignments);
+				case 20: return new ProgramaG(partition, propertyAssignments);
+				case 21: return new InsPosicionG(partition, propertyAssignments);
+				case 22: return new InsMoverG(partition, propertyAssignments);
+				case 23: return new SubprogramaG(partition, propertyAssignments);
+				case 24: return new InicioG(partition, propertyAssignments);
+				case 25: return new FinG(partition, propertyAssignments);
+				case 26: return new ImageShape1(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -244,13 +264,13 @@ namespace CE.DGH_DGC_SOM_IKP
 			{
 				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
 				createElementLinkMap.Add(typeof(AplicacionIPKHasImagen), 0);
-				createElementLinkMap.Add(typeof(ConjInstrHasInstruccion), 1);
-				createElementLinkMap.Add(typeof(ProgramaReferencesInstruccionInicial), 2);
-				createElementLinkMap.Add(typeof(ProgramaReferencesInstruccionFinal), 3);
-				createElementLinkMap.Add(typeof(InstruccionReferencessiguiente), 4);
-				createElementLinkMap.Add(typeof(ImagenReferencesPrograma), 5);
-				createElementLinkMap.Add(typeof(InsRepetirReferencesSubprograma), 6);
-				createElementLinkMap.Add(typeof(AplicacionIPKHasConjInstr), 7);
+				createElementLinkMap.Add(typeof(ImagenReferencesPrograma), 1);
+				createElementLinkMap.Add(typeof(InsRepetirReferencesSubprograma), 2);
+				createElementLinkMap.Add(typeof(AplicacionIPKHasConjInstr), 3);
+				createElementLinkMap.Add(typeof(InstruccionIntermediasReferencesInstruccion), 4);
+				createElementLinkMap.Add(typeof(ConjInstrHasInicioPrograma), 5);
+				createElementLinkMap.Add(typeof(ConjInstrHasInstruccion), 6);
+				createElementLinkMap.Add(typeof(InicioProgramaReferencesInstruccion), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -266,13 +286,13 @@ namespace CE.DGH_DGC_SOM_IKP
 			switch (index)
 			{
 				case 0: return new AplicacionIPKHasImagen(partition, roleAssignments, propertyAssignments);
-				case 1: return new ConjInstrHasInstruccion(partition, roleAssignments, propertyAssignments);
-				case 2: return new ProgramaReferencesInstruccionInicial(partition, roleAssignments, propertyAssignments);
-				case 3: return new ProgramaReferencesInstruccionFinal(partition, roleAssignments, propertyAssignments);
-				case 4: return new InstruccionReferencessiguiente(partition, roleAssignments, propertyAssignments);
-				case 5: return new ImagenReferencesPrograma(partition, roleAssignments, propertyAssignments);
-				case 6: return new InsRepetirReferencesSubprograma(partition, roleAssignments, propertyAssignments);
-				case 7: return new AplicacionIPKHasConjInstr(partition, roleAssignments, propertyAssignments);
+				case 1: return new ImagenReferencesPrograma(partition, roleAssignments, propertyAssignments);
+				case 2: return new InsRepetirReferencesSubprograma(partition, roleAssignments, propertyAssignments);
+				case 3: return new AplicacionIPKHasConjInstr(partition, roleAssignments, propertyAssignments);
+				case 4: return new InstruccionIntermediasReferencesInstruccion(partition, roleAssignments, propertyAssignments);
+				case 5: return new ConjInstrHasInicioPrograma(partition, roleAssignments, propertyAssignments);
+				case 6: return new ConjInstrHasInstruccion(partition, roleAssignments, propertyAssignments);
+				case 7: return new InicioProgramaReferencesInstruccion(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -442,8 +462,9 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::CE.DGH_DGC_SOM_IKP.AplicacionIPKHasImagen.ImagenDomainRoleId, true);
-			DomainRoles.Add(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId, true);
 			DomainRoles.Add(global::CE.DGH_DGC_SOM_IKP.AplicacionIPKHasConjInstr.ConjInstrDomainRoleId, true);
+			DomainRoles.Add(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId, true);
+			DomainRoles.Add(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -517,5 +538,40 @@ namespace CE.DGH_DGC_SOM_IKP
 	}
 	#endregion
 		
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainEnumeration: PosicionEnum
+	/// Description for CE.DGH_DGC_SOM_IKP.PosicionEnum
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum PosicionEnum
+	{
+		/// <summary>
+		/// Norte
+		/// Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Norte
+		/// </summary>
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.PosicionEnum/Norte.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		Norte,
+		/// <summary>
+		/// Sur
+		/// Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Sur
+		/// </summary>
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.PosicionEnum/Sur.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		Sur,
+		/// <summary>
+		/// Este
+		/// Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Este
+		/// </summary>
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.PosicionEnum/Este.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		Este,
+		/// <summary>
+		/// Oeste
+		/// Description for CE.DGH_DGC_SOM_IKP.PosicionEnum.Oeste
+		/// </summary>
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.PosicionEnum/Oeste.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		Oeste,
+	}
 }
 

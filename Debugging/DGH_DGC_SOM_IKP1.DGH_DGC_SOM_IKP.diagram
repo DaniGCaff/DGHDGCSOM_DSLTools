@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dGH_DGC_SOM_IKPDiagram dslVersion="1.0.0.0" Id="94602c59-770a-41a8-b3aa-c39d11156479" absoluteBounds="0, 0, 11, 8.625" name="DGH_DGC_SOM_IKP1">
+  <aplicacionIPKMoniker Id="cd784cc8-914d-47a7-b002-ebbfff3a9d6e" />
+  <nestedChildShapes>
+    <imageShape1 Id="a1204cee-cecd-424c-a926-ab64436984ac" absoluteBounds="0.625, 0.5, 5.3333334922790527, 5.3333334922790527">
+      <imagenMoniker Id="03f7fee5-9988-4923-87cd-05da8c458794" />
+    </imageShape1>
+    <programaG Id="dd682919-8b75-4df9-b329-2cabb3ea1bf1" absoluteBounds="3.125, 0.875, 6.5, 7.5">
+      <programaMoniker Id="824ad24b-5242-490a-a585-dffdf03ccf8c" />
+      <nestedChildShapes>
+        <insApuntarG Id="5825d906-35b7-4e95-9361-dbe5da7a0b52" absoluteBounds="4.25, 1.25, 1.125, 0.375">
+          <insApuntarMoniker Id="c20fa173-35bd-4d39-ab17-da05f834a540" />
+        </insApuntarG>
+        <insRepetirG Id="88ef9d60-c4e5-4279-8b2b-f220c9027a41" absoluteBounds="4.375, 2, 3.5, 3.875">
+          <insRepetirMoniker Id="6dd26910-effd-4716-8c36-563d451bb481" />
+        </insRepetirG>
+        <insFijarG Id="081fb055-9b20-43e6-8860-e58a6ebc3dbd" absoluteBounds="4.875, 6.875, 1, 0.375">
+          <insFijarMoniker Id="ef278d3c-5156-4d26-8b72-6fc1b882c6bd" />
+        </insFijarG>
+      </nestedChildShapes>
+    </programaG>
+    <inicioG Id="6132d762-0774-40c0-a8fd-ad2d10759f2f" absoluteBounds="3.375, 1.25, 0.375, 0.375">
+      <inicioProgramaMoniker Id="494df6f2-2b1b-4359-850e-e7af0a33cb9b" />
+    </inicioG>
+    <finG Id="517471fc-40f6-43a1-ab12-bfc513e95335" absoluteBounds="7, 7.25, 0.5, 0.5">
+      <insFinMoniker Id="a85c5d93-0bd0-429e-916b-8b22f0e6fdb6" />
+    </finG>
+    <ordenG Id="48938931-9a4a-4ee2-a808-6ca091936a2a" edgePoints="[(4.875 : 1.625); (4.875 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <instruccionIntermediasReferencesInstruccionMoniker Id="cee2b550-0078-4b5e-aded-beda8e982e3a" />
+      <nodes>
+        <insApuntarGMoniker Id="5825d906-35b7-4e95-9361-dbe5da7a0b52" />
+        <insRepetirGMoniker Id="88ef9d60-c4e5-4279-8b2b-f220c9027a41" />
+      </nodes>
+    </ordenG>
+    <ordenG Id="ee92f048-fbc1-4571-ab7d-444d48439551" edgePoints="[(5.53125 : 5.875); (5.53125 : 6.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <instruccionIntermediasReferencesInstruccionMoniker Id="d501690d-8874-4038-ae40-1d27b8a3de48" />
+      <nodes>
+        <insRepetirGMoniker Id="88ef9d60-c4e5-4279-8b2b-f220c9027a41" />
+        <insFijarGMoniker Id="081fb055-9b20-43e6-8860-e58a6ebc3dbd" />
+      </nodes>
+    </ordenG>
+    <ordenG Id="23889b1a-db9e-4bc0-bb2d-bb76cf0ea3d1" edgePoints="[(5.375 : 7.25); (5.375 : 7.53125); (7.00196081458769 : 7.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <instruccionIntermediasReferencesInstruccionMoniker Id="aaa58e94-b92d-49be-9039-a9ea887e63e3" />
+      <nodes>
+        <insFijarGMoniker Id="081fb055-9b20-43e6-8860-e58a6ebc3dbd" />
+        <finGMoniker Id="517471fc-40f6-43a1-ab12-bfc513e95335" />
+      </nodes>
+    </ordenG>
+    <ordenG Id="9a2763b5-50f6-4b82-856b-68af3653ffaa" edgePoints="[(3.75 : 1.4375); (4.25 : 1.4375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <inicioProgramaReferencesInstruccionMoniker Id="7834b0b2-b49f-4201-a060-a4e26fe29b83" />
+      <nodes>
+        <inicioGMoniker Id="6132d762-0774-40c0-a8fd-ad2d10759f2f" />
+        <insApuntarGMoniker Id="5825d906-35b7-4e95-9361-dbe5da7a0b52" />
+      </nodes>
+    </ordenG>
+    <subprogramaG Id="acef8bcf-782e-47b7-9651-7afa20a60110" absoluteBounds="4.625, 2.875, 2.875, 1.875">
+      <subprogramaMoniker Id="c91054bc-a595-4620-9baf-06ac524f97f7" />
+      <nestedChildShapes>
+        <insMoverG Id="9fc5a5af-f90d-431d-8f61-9647acdd5636" absoluteBounds="5.5, 3.5, 1.25, 0.5" pasos="10">
+          <insMoverMoniker Id="db266755-566c-4e58-8e1b-b52d9600940f" />
+        </insMoverG>
+      </nestedChildShapes>
+    </subprogramaG>
+    <repetirSubprogramaG Id="3b620b61-de11-4b9b-a38c-700dd39030c3" edgePoints="[(7.875 : 3.9375); (7.5 : 3.9375); (7.5 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <insRepetirReferencesSubprogramaMoniker Id="64fae125-1499-4bda-9846-3100a2e1e394" />
+      <nodes>
+        <insRepetirGMoniker Id="88ef9d60-c4e5-4279-8b2b-f220c9027a41" />
+        <subprogramaGMoniker Id="acef8bcf-782e-47b7-9651-7afa20a60110" />
+      </nodes>
+    </repetirSubprogramaG>
+    <inicioG Id="73e704ec-5b2e-42f7-b819-71737f81364f" absoluteBounds="4.875, 3, 0.375, 0.375">
+      <inicioProgramaMoniker Id="756cbd47-6c8a-43f7-99be-1a789c68aae9" />
+    </inicioG>
+    <finG Id="d03c7a13-945e-4772-b1f8-6614471dde0b" absoluteBounds="6.75, 4.125, 0.375, 0.375">
+      <insFinMoniker Id="d7eb8194-d3ca-4675-968c-054ffbcfc1f1" />
+    </finG>
+    <ordenG Id="5c6b0211-0fb0-4f0b-83e5-1a7e60fb2112" edgePoints="[(6.75 : 3.75); (6.9375 : 4.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <instruccionIntermediasReferencesInstruccionMoniker Id="6f8dfe0d-efd9-4f7f-bcbc-d32083425b5f" />
+      <nodes>
+        <insMoverGMoniker Id="9fc5a5af-f90d-431d-8f61-9647acdd5636" />
+        <finGMoniker Id="d03c7a13-945e-4772-b1f8-6614471dde0b" />
+      </nodes>
+    </ordenG>
+    <ordenG Id="296f01b5-b0bc-40bf-9d97-aadff500f8d3" edgePoints="[(5.0625 : 3.375); (5.5 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <inicioProgramaReferencesInstruccionMoniker Id="3b365cea-74a4-4366-a1b6-512d91284cd2" />
+      <nodes>
+        <inicioGMoniker Id="73e704ec-5b2e-42f7-b819-71737f81364f" />
+        <insMoverGMoniker Id="9fc5a5af-f90d-431d-8f61-9647acdd5636" />
+      </nodes>
+    </ordenG>
+    <programaImagen Id="7de5c438-58b9-4db5-9848-1a4ea6c08adf" edgePoints="[(3.29166674613953 : 0.5); (3.29166674613953 : 0.25); (6.375 : 0.25); (6.375 : 0.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <imagenReferencesProgramaMoniker Id="a130c110-442e-4836-a46c-9bc403d26a4b" />
+      <nodes>
+        <imageShape1Moniker Id="a1204cee-cecd-424c-a926-ab64436984ac" />
+        <programaGMoniker Id="dd682919-8b75-4df9-b329-2cabb3ea1bf1" />
+      </nodes>
+    </programaImagen>
+  </nestedChildShapes>
+</dGH_DGC_SOM_IKPDiagram>

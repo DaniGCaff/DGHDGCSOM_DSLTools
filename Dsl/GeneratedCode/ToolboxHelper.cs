@@ -48,14 +48,6 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// </remarks>
 		public const string ToolboxFilterString = "DGH_DGC_SOM_IKP.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify InicialTool connector tool.
-		/// </summary>
-		public const string InicialToolFilterString = "InicialTool.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify FinalTool connector tool.
-		/// </summary>
-		public const string FinalToolFilterString = "FinalTool.1.0";
-		/// <summary>
 		/// Toolbox item filter string used to identify OrdenTool connector tool.
 		/// </summary>
 		public const string OrdenToolFilterString = "OrdenTool.1.0";
@@ -67,6 +59,10 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// Toolbox item filter string used to identify RepetirSubprogramaTool connector tool.
 		/// </summary>
 		public const string RepetirSubprogramaToolFilterString = "RepetirSubprogramaTool.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify PrimeraInstruccion connector tool.
+		/// </summary>
+		public const string PrimeraInstruccionFilterString = "PrimeraInstruccion.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -114,7 +110,7 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 			get
 			{
-				return 13;
+				return 14;
 			}
 		}
 		
@@ -243,48 +239,12 @@ namespace CE.DGH_DGC_SOM_IKP
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "CE.DGH_DGC_SOM_IKP.InicialToolToolboxItem":
-
-					// Add InicialTool connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"CE.DGH_DGC_SOM_IKP.InicialToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("InicialToolToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("InicialToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("DGH_DGC_SOM_IKPToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("InicialToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(InicialToolFilterString)
-						});
-					break;
-				case "CE.DGH_DGC_SOM_IKP.FinalToolToolboxItem":
-
-					// Add FinalTool connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"CE.DGH_DGC_SOM_IKP.FinalToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						7, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("FinalToolToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FinalToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("DGH_DGC_SOM_IKPToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"FinalTool", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("FinalToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(FinalToolFilterString)
-						});
-					break;
 				case "CE.DGH_DGC_SOM_IKP.OrdenToolToolboxItem":
 
 					// Add OrdenTool connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.OrdenToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
+						6, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("OrdenToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OrdenToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -301,7 +261,7 @@ namespace CE.DGH_DGC_SOM_IKP
 					// Add PosicionTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.PosicionToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						9, // Position relative to other items in the same toolbox tab.
+						7, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("PosicionToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("PosicionToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -317,7 +277,7 @@ namespace CE.DGH_DGC_SOM_IKP
 					// Add MoverTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.MoverToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						10, // Position relative to other items in the same toolbox tab.
+						8, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("MoverToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MoverToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -334,7 +294,7 @@ namespace CE.DGH_DGC_SOM_IKP
 					// Add ProgramaImagenTool connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.ProgramaImagenToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						11, // Position relative to other items in the same toolbox tab.
+						9, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ProgramaImagenToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ProgramaImagenToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -352,7 +312,7 @@ namespace CE.DGH_DGC_SOM_IKP
 					// Add RepetirSubprogramaTool connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.RepetirSubprogramaToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						12, // Position relative to other items in the same toolbox tab.
+						10, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("RepetirSubprogramaToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("RepetirSubprogramaToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -369,7 +329,7 @@ namespace CE.DGH_DGC_SOM_IKP
 					// Add SubprogramaTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"CE.DGH_DGC_SOM_IKP.SubprogramaToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						13, // Position relative to other items in the same toolbox tab.
+						11, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("SubprogramaToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SubprogramaToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -379,6 +339,56 @@ namespace CE.DGH_DGC_SOM_IKP
 						CreateElementToolPrototype(store, global::CE.DGH_DGC_SOM_IKP.Subprograma.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "CE.DGH_DGC_SOM_IKP.InicioToolToolboxItem":
+					// Add InicioTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"CE.DGH_DGC_SOM_IKP.InicioToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						12, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("InicioToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("InicioToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("DGH_DGC_SOM_IKPToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"InicioTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("InicioToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::CE.DGH_DGC_SOM_IKP.InicioPrograma.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "CE.DGH_DGC_SOM_IKP.FinToolToolboxItem":
+					// Add FinTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"CE.DGH_DGC_SOM_IKP.FinToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						13, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("FinToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FinToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("DGH_DGC_SOM_IKPToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"FinTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("FinToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::CE.DGH_DGC_SOM_IKP.InsFin.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "CE.DGH_DGC_SOM_IKP.PrimeraInstruccionToolboxItem":
+
+					// Add PrimeraInstruccion connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"CE.DGH_DGC_SOM_IKP.PrimeraInstruccionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						14, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("PrimeraInstruccionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("PrimeraInstruccionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("DGH_DGC_SOM_IKPToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"PrimeraInstruccion", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("PrimeraInstruccionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(PrimeraInstruccionFilterString)
 						});
 					break;
 				default:

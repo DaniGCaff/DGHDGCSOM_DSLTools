@@ -137,6 +137,93 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 		}
 		#endregion
+		#region DomainProperty1 domain property code
+		
+		/// <summary>
+		/// DomainProperty1 domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid DomainProperty1DomainPropertyId = new global::System.Guid(0xf8782dc5, 0x1449, 0x41d5, 0x9f, 0x74, 0xab, 0x1a, 0x53, 0x4f, 0x7b, 0x11);
+		
+		/// <summary>
+		/// Storage for DomainProperty1
+		/// </summary>
+		private global::System.String domainProperty1PropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of DomainProperty1 domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.ImageShape1.Domain Property1
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.ImageShape1/DomainProperty1.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.ImageShape1/DomainProperty1.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f8782dc5-1449-41d5-9f74-ab1a534f7b11")]
+		public global::System.String DomainProperty1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return domainProperty1PropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DomainProperty1PropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ImageShape1.DomainProperty1 domain property.
+		/// </summary>
+		internal sealed partial class DomainProperty1PropertyHandler : DslModeling::DomainPropertyValueHandler<ImageShape1, global::System.String>
+		{
+			private DomainProperty1PropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ImageShape1.DomainProperty1 domain property value handler.
+			/// </summary>
+			public static readonly DomainProperty1PropertyHandler Instance = new DomainProperty1PropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ImageShape1.DomainProperty1 domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return DomainProperty1DomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ImageShape1 element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.domainProperty1PropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ImageShape1 element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.domainProperty1PropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace CE.DGH_DGC_SOM_IKP
@@ -356,6 +443,93 @@ namespace CE.DGH_DGC_SOM_IKP
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+		#region Porcentaje domain property code
+		
+		/// <summary>
+		/// Porcentaje domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid PorcentajeDomainPropertyId = new global::System.Guid(0x0fd023c4, 0xcfd3, 0x43f4, 0x8f, 0x0b, 0x21, 0x0d, 0xa6, 0x1d, 0x3a, 0x7f);
+		
+		/// <summary>
+		/// Storage for Porcentaje
+		/// </summary>
+		private global::System.UInt16 porcentajePropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Porcentaje domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsFijarG.Porcentaje
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsFijarG/Porcentaje.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsFijarG/Porcentaje.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("0fd023c4-cfd3-43f4-8f0b-210da61d3a7f")]
+		public global::System.UInt16 Porcentaje
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return porcentajePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				PorcentajePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsFijarG.Porcentaje domain property.
+		/// </summary>
+		internal sealed partial class PorcentajePropertyHandler : DslModeling::DomainPropertyValueHandler<InsFijarG, global::System.UInt16>
+		{
+			private PorcentajePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsFijarG.Porcentaje domain property value handler.
+			/// </summary>
+			public static readonly PorcentajePropertyHandler Instance = new PorcentajePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsFijarG.Porcentaje domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return PorcentajeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.UInt16 GetValue(InsFijarG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.porcentajePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsFijarG element, global::System.UInt16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.UInt16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.porcentajePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }
@@ -577,6 +751,93 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 		}
 		#endregion
+		#region Direccion domain property code
+		
+		/// <summary>
+		/// Direccion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid DireccionDomainPropertyId = new global::System.Guid(0xa227b4b1, 0x5252, 0x431b, 0x84, 0xd6, 0x73, 0x2c, 0x6d, 0xf2, 0xa1, 0x97);
+		
+		/// <summary>
+		/// Storage for Direccion
+		/// </summary>
+		private PosicionEnum direccionPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Direccion domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsApuntarG.Direccion
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsApuntarG/Direccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsApuntarG/Direccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a227b4b1-5252-431b-84d6-732c6df2a197")]
+		public PosicionEnum Direccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return direccionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DireccionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsApuntarG.Direccion domain property.
+		/// </summary>
+		internal sealed partial class DireccionPropertyHandler : DslModeling::DomainPropertyValueHandler<InsApuntarG, PosicionEnum>
+		{
+			private DireccionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsApuntarG.Direccion domain property value handler.
+			/// </summary>
+			public static readonly DireccionPropertyHandler Instance = new DireccionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsApuntarG.Direccion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return DireccionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed PosicionEnum GetValue(InsApuntarG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.direccionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsApuntarG element, PosicionEnum newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				PosicionEnum oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.direccionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace CE.DGH_DGC_SOM_IKP
@@ -796,6 +1057,93 @@ namespace CE.DGH_DGC_SOM_IKP
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+		#region Veces domain property code
+		
+		/// <summary>
+		/// Veces domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid VecesDomainPropertyId = new global::System.Guid(0xab0a5d3a, 0xcff5, 0x4d58, 0xb3, 0x01, 0x7a, 0xf3, 0xd4, 0xc9, 0x44, 0x7e);
+		
+		/// <summary>
+		/// Storage for Veces
+		/// </summary>
+		private global::System.Int32 vecesPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Veces domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsRepetirG.Veces
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsRepetirG/Veces.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsRepetirG/Veces.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ab0a5d3a-cff5-4d58-b301-7af3d4c9447e")]
+		public global::System.Int32 Veces
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return vecesPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				VecesPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsRepetirG.Veces domain property.
+		/// </summary>
+		internal sealed partial class VecesPropertyHandler : DslModeling::DomainPropertyValueHandler<InsRepetirG, global::System.Int32>
+		{
+			private VecesPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsRepetirG.Veces domain property value handler.
+			/// </summary>
+			public static readonly VecesPropertyHandler Instance = new VecesPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsRepetirG.Veces domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return VecesDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int32 GetValue(InsRepetirG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.vecesPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsRepetirG element, global::System.Int32 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int32 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.vecesPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }
@@ -1166,6 +1514,182 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 		}
 		#endregion
+		#region X domain property code
+		
+		/// <summary>
+		/// X domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid XDomainPropertyId = new global::System.Guid(0xd6c826ca, 0x5d99, 0x499f, 0x80, 0x2e, 0x2a, 0xcb, 0x2b, 0x5d, 0x32, 0x4f);
+		
+		/// <summary>
+		/// Storage for X
+		/// </summary>
+		private global::System.Double xPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of X domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.X
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsPosicionG/X.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsPosicionG/X.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d6c826ca-5d99-499f-802e-2acb2b5d324f")]
+		public global::System.Double X
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return xPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				XPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsPosicionG.X domain property.
+		/// </summary>
+		internal sealed partial class XPropertyHandler : DslModeling::DomainPropertyValueHandler<InsPosicionG, global::System.Double>
+		{
+			private XPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsPosicionG.X domain property value handler.
+			/// </summary>
+			public static readonly XPropertyHandler Instance = new XPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsPosicionG.X domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return XDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(InsPosicionG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.xPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsPosicionG element, global::System.Double newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Double oldValue = GetValue(element);
+				// double type precision is guaranteed only to 15th digit.
+				if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.xPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Y domain property code
+		
+		/// <summary>
+		/// Y domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid YDomainPropertyId = new global::System.Guid(0x7c3bb4fb, 0x6425, 0x466a, 0xbd, 0xda, 0x02, 0xdd, 0x71, 0xec, 0x0b, 0xce);
+		
+		/// <summary>
+		/// Storage for Y
+		/// </summary>
+		private global::System.Double yPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Y domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsPosicionG.Y
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsPosicionG/Y.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsPosicionG/Y.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7c3bb4fb-6425-466a-bdda-02dd71ec0bce")]
+		public global::System.Double Y
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return yPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				YPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsPosicionG.Y domain property.
+		/// </summary>
+		internal sealed partial class YPropertyHandler : DslModeling::DomainPropertyValueHandler<InsPosicionG, global::System.Double>
+		{
+			private YPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsPosicionG.Y domain property value handler.
+			/// </summary>
+			public static readonly YPropertyHandler Instance = new YPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsPosicionG.Y domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return YDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(InsPosicionG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.yPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsPosicionG element, global::System.Double newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Double oldValue = GetValue(element);
+				// double type precision is guaranteed only to 15th digit.
+				if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.yPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace CE.DGH_DGC_SOM_IKP
@@ -1386,6 +1910,93 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 		}
 		#endregion
+		#region Pasos domain property code
+		
+		/// <summary>
+		/// Pasos domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid PasosDomainPropertyId = new global::System.Guid(0x25474229, 0x3f2c, 0x4c99, 0xb6, 0x4c, 0x26, 0x02, 0x91, 0x50, 0xd3, 0xda);
+		
+		/// <summary>
+		/// Storage for Pasos
+		/// </summary>
+		private global::System.Int32 pasosPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Pasos domain property.
+		/// Description for CE.DGH_DGC_SOM_IKP.InsMoverG.Pasos
+		/// </summary>
+		[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsMoverG/Pasos.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsMoverG/Pasos.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("25474229-3f2c-4c99-b64c-26029150d3da")]
+		public global::System.Int32 Pasos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return pasosPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				PasosPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InsMoverG.Pasos domain property.
+		/// </summary>
+		internal sealed partial class PasosPropertyHandler : DslModeling::DomainPropertyValueHandler<InsMoverG, global::System.Int32>
+		{
+			private PasosPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InsMoverG.Pasos domain property value handler.
+			/// </summary>
+			public static readonly PasosPropertyHandler Instance = new PasosPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InsMoverG.Pasos domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return PasosDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int32 GetValue(InsMoverG element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.pasosPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InsMoverG element, global::System.Int32 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int32 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.pasosPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace CE.DGH_DGC_SOM_IKP
@@ -1546,6 +2157,312 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public SubprogramaG(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainClass InicioG
+	/// Description for CE.DGH_DGC_SOM_IKP.InicioG
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InicioG.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InicioG.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("fd96b5f0-2321-40f3-a366-ee42f00126eb")]
+	public partial class InicioG : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with InicioG.
+		/// </summary>
+		public static DslDiagrams::Decorator FindInicioGDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1.5);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LawnGreen);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.Circle;
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// InicioG domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfd96b5f0, 0x2321, 0x40f3, 0xa3, 0x66, 0xee, 0x42, 0xf0, 0x01, 0x26, 0xeb);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InicioG(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InicioG(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainClass FinG
+	/// Description for CE.DGH_DGC_SOM_IKP.FinG
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.FinG.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.FinG.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("fbe8feca-2763-49cf-b498-f1092cf0826d")]
+	public partial class FinG : DslDiagrams::NodeShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with FinG.
+		/// </summary>
+		public static DslDiagrams::Decorator FindFinGDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(1.5, 1.5);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Red);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.Circle;
+			}
+		}
+		#endregion
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// FinG domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfbe8feca, 0x2763, 0x49cf, 0xb4, 0x98, 0xf1, 0x09, 0x2c, 0xf0, 0x82, 0x6d);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public FinG(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public FinG(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

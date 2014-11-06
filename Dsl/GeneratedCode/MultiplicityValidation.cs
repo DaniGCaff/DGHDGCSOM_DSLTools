@@ -37,38 +37,6 @@ namespace CE.DGH_DGC_SOM_IKP
 namespace CE.DGH_DGC_SOM_IKP
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public abstract partial class ConjInstr
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateConjInstrMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.InstruccionInicial == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"ConjInstr", "", "InstruccionInicial"),
-						"DSL0001", this);
-			}
-			if (this.InstruccionFinal == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"ConjInstr", "", "InstruccionFinal"),
-						"DSL0001", this);
-			}
-		} // ValidateConjInstrMultiplicity
-	} // class ConjInstr
-} // CE.DGH_DGC_SOM_IKP
-
-namespace CE.DGH_DGC_SOM_IKP
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class InsRepetir
 	{
 		/// <summary>
@@ -136,6 +104,30 @@ namespace CE.DGH_DGC_SOM_IKP
 			}
 		} // ValidateSubprogramaMultiplicity
 	} // class Subprograma
+} // CE.DGH_DGC_SOM_IKP
+
+namespace CE.DGH_DGC_SOM_IKP
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public abstract partial class Instruccion
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateInstruccionMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.InicioPrograma == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Instruccion", "", "InicioPrograma"),
+						"DSL0001", this);
+			}
+		} // ValidateInstruccionMultiplicity
+	} // class Instruccion
 } // CE.DGH_DGC_SOM_IKP
 
 	

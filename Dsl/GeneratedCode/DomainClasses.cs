@@ -313,60 +313,6 @@ namespace CE.DGH_DGC_SOM_IKP
 		{
 		}
 		#endregion
-		#region Instruccion opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Instruccion.
-		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Instruccion> Instruccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Instruccion>, Instruccion>(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
-			}
-		}
-		#endregion
-		#region InstruccionInicial opposite domain role accessor
-		/// <summary>
-		/// Gets or sets InstruccionInicial.
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstr
-		/// </summary>
-		public virtual Instruccion InstruccionInicial
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId) as Instruccion;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.ConjInstrDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region InstruccionFinal opposite domain role accessor
-		/// <summary>
-		/// Gets or sets InstruccionFinal.
-		/// Description for CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstr
-		/// </summary>
-		public virtual Instruccion InstruccionFinal
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId) as Instruccion;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.ConjInstrDomainRoleId, value);
-			}
-		}
-		#endregion
 		#region AplicacionIPK opposite domain role accessor
 		/// <summary>
 		/// Gets or sets AplicacionIPK.
@@ -383,6 +329,40 @@ namespace CE.DGH_DGC_SOM_IKP
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.AplicacionIPKHasConjInstr.ConjInstrDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region InicioPrograma opposite domain role accessor
+		/// <summary>
+		/// Gets or sets InicioPrograma.
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstr
+		/// </summary>
+		public virtual InicioPrograma InicioPrograma
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId) as InicioPrograma;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Instruccion opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Instruccion.
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstr
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Instruccion> Instruccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Instruccion>, Instruccion>(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.ConjInstrDomainRoleId);
 			}
 		}
 		#endregion
@@ -408,6 +388,16 @@ namespace CE.DGH_DGC_SOM_IKP
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::CE.DGH_DGC_SOM_IKP.Instruccion.DomainClassId)) 
 				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::CE.DGH_DGC_SOM_IKP.InicioPrograma.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ConjInstrHasInicioPrograma.InicioPrograma
+					if (this.InicioPrograma != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -440,6 +430,15 @@ namespace CE.DGH_DGC_SOM_IKP
 			{
 				// Create link for path ConjInstrHasInstruccion.Instruccion
 				this.Instruccion.Add(sourceInstruccion1);
+
+				return;
+			}
+				
+			global::CE.DGH_DGC_SOM_IKP.InicioPrograma sourceInicioPrograma2 = sourceElement as global::CE.DGH_DGC_SOM_IKP.InicioPrograma;
+			if (sourceInicioPrograma2 != null)
+			{
+				// Create link for path ConjInstrHasInicioPrograma.InicioPrograma
+				this.InicioPrograma = sourceInicioPrograma2;
 
 				return;
 			}
@@ -479,6 +478,20 @@ namespace CE.DGH_DGC_SOM_IKP
 
 				return;
 			}
+				
+			global::CE.DGH_DGC_SOM_IKP.InicioPrograma sourceInicioPrograma2 = sourceElement as global::CE.DGH_DGC_SOM_IKP.InicioPrograma;
+			if (sourceInicioPrograma2 != null)
+			{
+				// Delete link for path ConjInstrHasInicioPrograma.InicioPrograma
+				
+				foreach (DslModeling::ElementLink link in global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.GetLinks((global::CE.DGH_DGC_SOM_IKP.ConjInstr)this, sourceInicioPrograma2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.ConjInstrDomainRoleId, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId);
+				}
+
+				return;
+			}
 			// Fall through to base class if this class hasn't handled the unmerge.
 			base.MergeDisconnect(sourceElement);
 		}
@@ -488,20 +501,20 @@ namespace CE.DGH_DGC_SOM_IKP
 namespace CE.DGH_DGC_SOM_IKP
 {
 	/// <summary>
-	/// DomainClass Instruccion
-	/// Description for CE.DGH_DGC_SOM_IKP.Instruccion
+	/// DomainClass InstruccionIntermedias
+	/// Description for CE.DGH_DGC_SOM_IKP.InstruccionIntermedias
 	/// </summary>
-	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermedias.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InstruccionIntermedias.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("96ae80fb-9d84-476f-94c8-b759c045c0f1")]
-	public abstract partial class Instruccion : DslModeling::ModelElement
+	public abstract partial class InstruccionIntermedias : Instruccion
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Instruccion domain class Id.
+		/// InstruccionIntermedias domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x96ae80fb, 0x9d84, 0x476f, 0x94, 0xc8, 0xb7, 0x59, 0xc0, 0x45, 0xc0, 0xf1);
 		/// <summary>
@@ -509,107 +522,28 @@ namespace CE.DGH_DGC_SOM_IKP
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		protected Instruccion(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+		protected InstruccionIntermedias(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
 		#endregion
-		#region ConjInstr opposite domain role accessor
+		#region Instruccion opposite domain role accessor
 		/// <summary>
-		/// Gets or sets ConjInstr.
-		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion
-		/// </summary>
-		public virtual ConjInstr ConjInstr
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId) as ConjInstr;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ProgramaA opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ProgramaA.
+		/// Gets or sets Instruccion.
 		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.Instruccion
+		/// CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermedias
 		/// </summary>
-		public virtual ConjInstr ProgramaA
+		public virtual Instruccion Instruccion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.InstruccionDomainRoleId) as ConjInstr;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId) as Instruccion;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionInicial.InstruccionDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ProgramaB opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ProgramaB.
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.Instruccion
-		/// </summary>
-		public virtual ConjInstr ProgramaB
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.InstruccionDomainRoleId) as ConjInstr;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ProgramaReferencesInstruccionFinal.InstruccionDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region siguiente opposite domain role accessor
-		/// <summary>
-		/// Gets or sets siguiente.
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccion
-		/// </summary>
-		public virtual Instruccion siguiente
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccionDomainRoleId) as Instruccion;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.SourceInstruccionDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region anterior opposite domain role accessor
-		/// <summary>
-		/// Gets or sets anterior.
-		/// Description for
-		/// CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccion
-		/// </summary>
-		public virtual Instruccion anterior
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccionDomainRoleId) as Instruccion;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionReferencessiguiente.TargetInstruccionDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionIntermediasDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -626,7 +560,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1324cdaf-c38b-4d17-bcfa-ce696cb737ca")]
-	public partial class InsRepetir : Instruccion
+	public partial class InsRepetir : InstruccionIntermedias
 	{
 		#region Constructors, domain class Id
 	
@@ -686,7 +620,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("80346f3c-37cb-4bcd-b25a-37df08dd1490")]
-	public partial class InsFijar : Instruccion
+	public partial class InsFijar : InstruccionIntermedias
 	{
 		#region Constructors, domain class Id
 	
@@ -727,7 +661,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("aaaaa2d7-a07d-4123-8187-f628f669caf8")]
-	public partial class InsApuntar : Instruccion
+	public partial class InsApuntar : InstruccionIntermedias
 	{
 		#region Constructors, domain class Id
 	
@@ -768,7 +702,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("aa1d0fad-521e-4975-bf96-f2dbf2f77c12")]
-	public partial class InsPosicion : Instruccion
+	public partial class InsPosicion : InstruccionIntermedias
 	{
 		#region Constructors, domain class Id
 	
@@ -809,7 +743,7 @@ namespace CE.DGH_DGC_SOM_IKP
 	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a063983b-ffdb-440c-9d1a-488b9b864246")]
-	public partial class InsMover : Instruccion
+	public partial class InsMover : InstruccionIntermedias
 	{
 		#region Constructors, domain class Id
 	
@@ -954,6 +888,217 @@ namespace CE.DGH_DGC_SOM_IKP
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InsRepetirReferencesSubprograma.SubprogramaDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainClass Instruccion
+	/// Description for CE.DGH_DGC_SOM_IKP.Instruccion
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.Instruccion.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.Instruccion.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("238e12e6-1d12-4587-b0a8-ded51217ee01")]
+	public abstract partial class Instruccion : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Instruccion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x238e12e6, 0x1d12, 0x4587, 0xb0, 0xa8, 0xde, 0xd5, 0x12, 0x17, 0xee, 0x01);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected Instruccion(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region InstruccionIntermedias opposite domain role accessor
+		/// <summary>
+		/// Gets or sets InstruccionIntermedias.
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.Instruccion
+		/// </summary>
+		public virtual InstruccionIntermedias InstruccionIntermedias
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionDomainRoleId) as InstruccionIntermedias;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InstruccionIntermediasReferencesInstruccion.InstruccionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ConjInstr opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ConjInstr.
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.Instruccion
+		/// </summary>
+		public virtual ConjInstr ConjInstr
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId) as ConjInstr;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInstruccion.InstruccionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region InicioPrograma opposite domain role accessor
+		/// <summary>
+		/// Gets or sets InicioPrograma.
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.Instruccion
+		/// </summary>
+		public virtual InicioPrograma InicioPrograma
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InstruccionDomainRoleId) as InicioPrograma;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InstruccionDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainClass InsFin
+	/// Description for CE.DGH_DGC_SOM_IKP.InsFin
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InsFin.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InsFin.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("40696572-d068-40fc-b225-f81d0567cb4d")]
+	public partial class InsFin : Instruccion
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// InsFin domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x40696572, 0xd068, 0x40fc, 0xb2, 0x25, 0xf8, 0x1d, 0x05, 0x67, 0xcb, 0x4d);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InsFin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InsFin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace CE.DGH_DGC_SOM_IKP
+{
+	/// <summary>
+	/// DomainClass InicioPrograma
+	/// Description for CE.DGH_DGC_SOM_IKP.InicioPrograma
+	/// </summary>
+	[DslDesign::DisplayNameResource("CE.DGH_DGC_SOM_IKP.InicioPrograma.DisplayName", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("CE.DGH_DGC_SOM_IKP.InicioPrograma.Description", typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel), "CE.DGH_DGC_SOM_IKP.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKPDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("ac6431ff-9ca9-4045-ab33-c413ab33a781")]
+	public partial class InicioPrograma : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// InicioPrograma domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xac6431ff, 0x9ca9, 0x4045, 0xab, 0x33, 0xc4, 0x13, 0xab, 0x33, 0xa7, 0x81);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InicioPrograma(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InicioPrograma(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ConjInstr opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ConjInstr.
+		/// Description for CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioPrograma
+		/// </summary>
+		public virtual ConjInstr ConjInstr
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId) as ConjInstr;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.ConjInstrHasInicioPrograma.InicioProgramaDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Instruccion opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Instruccion.
+		/// Description for
+		/// CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioPrograma
+		/// </summary>
+		public virtual Instruccion Instruccion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId) as Instruccion;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::CE.DGH_DGC_SOM_IKP.InicioProgramaReferencesInstruccion.InicioProgramaDomainRoleId, value);
 			}
 		}
 		#endregion
