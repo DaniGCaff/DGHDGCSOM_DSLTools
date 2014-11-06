@@ -219,7 +219,7 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <ImageShape Id="676c5cc1-f21c-4eac-8134-8b9cf4dd889d" Description="Description for CE.DGH_DGC_SOM_IKP.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Image Shape1" InitialHeight="1" Image="C:\Users\bj0550\Desktop\collie.png" />
+    <ImageShape Id="676c5cc1-f21c-4eac-8134-8b9cf4dd889d" Description="Description for CE.DGH_DGC_SOM_IKP.ImageShape1" Name="ImageShape1" DisplayName="Image Shape1" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Image Shape1" InitialHeight="1" Image="Resources\collie.png" />
     <GeometryShape Id="2e88af77-6a65-416a-80e2-741882eb67f7" Description="Description for CE.DGH_DGC_SOM_IKP.InsFijarG" Name="InsFijarG" DisplayName="Ins Fijar G" Namespace="CE.DGH_DGC_SOM_IKP" FixedTooltipText="Ins Fijar G" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Fijar" DisplayName="Fijar tamaño " DefaultText="Fijar" />
@@ -583,43 +583,43 @@
       <XmlSerializationBehaviorMoniker Name="DGH_DGC_SOM_IKPSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="DGH_DGC_SOM_IKP">
-      <ElementTool Name="ImagenTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="ImagenTool" Tooltip="Imagen Tool" HelpKeyword="ImagenTool">
+      <ElementTool Name="ImagenTool" ToolboxIcon="Resources\imagen.bmp" Caption="ImagenTool" Tooltip="Imagen Tool" HelpKeyword="ImagenTool">
         <DomainClassMoniker Name="Imagen" />
       </ElementTool>
-      <ElementTool Name="ProgramaTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="ProgramaTool" Tooltip="Programa Tool" HelpKeyword="ProgramaTool">
+      <ElementTool Name="ProgramaTool" ToolboxIcon="Resources\programa.bmp" Caption="ProgramaTool" Tooltip="Programa Tool" HelpKeyword="ProgramaTool">
         <DomainClassMoniker Name="Programa" />
       </ElementTool>
-      <ElementTool Name="ControlTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="ControlTool" Tooltip="Control Tool" HelpKeyword="ControlTool">
+      <ElementTool Name="ControlTool" ToolboxIcon="Resources\programa.bmp" Caption="ControlTool" Tooltip="Control Tool" HelpKeyword="ControlTool">
         <DomainClassMoniker Name="InsRepetir" />
       </ElementTool>
-      <ElementTool Name="ApuntarTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="ApuntarTool" Tooltip="Apuntar Tool" HelpKeyword="ApuntarTool">
+      <ElementTool Name="ApuntarTool" ToolboxIcon="Resources\programa.bmp" Caption="ApuntarTool" Tooltip="Apuntar Tool" HelpKeyword="ApuntarTool">
         <DomainClassMoniker Name="InsApuntar" />
       </ElementTool>
-      <ElementTool Name="FijarTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="FijarTool" Tooltip="Fijar Tool" HelpKeyword="FijarTool">
+      <ElementTool Name="FijarTool" ToolboxIcon="Resources\programa.bmp" Caption="FijarTool" Tooltip="Fijar Tool" HelpKeyword="FijarTool">
         <DomainClassMoniker Name="InsFijar" />
       </ElementTool>
-      <ConnectionTool Name="InicialTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="InicialTool" Tooltip="Inicial Tool" HelpKeyword="">
+      <ConnectionTool Name="InicialTool" ToolboxIcon="Resources\imagen.bmp" Caption="InicialTool" Tooltip="Inicial Tool" HelpKeyword="">
         <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/ProgramaReferencesInstruccionInicialBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="FinalTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="FinalTool" Tooltip="Final Tool" HelpKeyword="FinalTool">
+      <ConnectionTool Name="FinalTool" ToolboxIcon="Resources\imagen.bmp" Caption="FinalTool" Tooltip="Final Tool" HelpKeyword="FinalTool">
         <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/ProgramaReferencesInstruccionFinalBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="OrdenTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="OrdenTool" Tooltip="Orden Tool" HelpKeyword="OrdenTool">
+      <ConnectionTool Name="OrdenTool" ToolboxIcon="Resources\imagen.bmp" Caption="OrdenTool" Tooltip="Orden Tool" HelpKeyword="OrdenTool">
         <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/InstruccionReferencessiguienteBuilder" />
       </ConnectionTool>
-      <ElementTool Name="PosicionTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="PosicionTool" Tooltip="Posicion Tool" HelpKeyword="PosicionTool">
+      <ElementTool Name="PosicionTool" ToolboxIcon="Resources\programa.bmp" Caption="PosicionTool" Tooltip="Posicion Tool" HelpKeyword="PosicionTool">
         <DomainClassMoniker Name="InsPosicion" />
       </ElementTool>
-      <ElementTool Name="MoverTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="MoverTool" Tooltip="Mover Tool" HelpKeyword="MoverTool">
+      <ElementTool Name="MoverTool" ToolboxIcon="Resources\programa.bmp" Caption="MoverTool" Tooltip="Mover Tool" HelpKeyword="MoverTool">
         <DomainClassMoniker Name="InsMover" />
       </ElementTool>
-      <ConnectionTool Name="ProgramaImagenTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="ProgramaImagenTool" Tooltip="Programa Imagen Tool" HelpKeyword="ProgramaImagenTool">
+      <ConnectionTool Name="ProgramaImagenTool" ToolboxIcon="Resources\imagen.bmp" Caption="ProgramaImagenTool" Tooltip="Programa Imagen Tool" HelpKeyword="ProgramaImagenTool">
         <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/ImagenReferencesProgramaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="RepetirSubprogramaTool" ToolboxIcon="C:\Users\bj0550\Desktop\imagen.bmp" Caption="RepetirSubprogramaTool" Tooltip="Repetir Subprograma Tool" HelpKeyword="RepetirSubprogramaTool">
+      <ConnectionTool Name="RepetirSubprogramaTool" ToolboxIcon="Resources\imagen.bmp" Caption="RepetirSubprogramaTool" Tooltip="Repetir Subprograma Tool" HelpKeyword="RepetirSubprogramaTool">
         <ConnectionBuilderMoniker Name="DGH_DGC_SOM_IKP/InsRepetirReferencesSubprogramaBuilder" />
       </ConnectionTool>
-      <ElementTool Name="SubprogramaTool" ToolboxIcon="C:\Users\bj0550\Desktop\programa.bmp" Caption="SubprogramaTool" Tooltip="Subprograma Tool" HelpKeyword="SubprogramaTool">
+      <ElementTool Name="SubprogramaTool" ToolboxIcon="Resources\programa.bmp" Caption="SubprogramaTool" Tooltip="Subprograma Tool" HelpKeyword="SubprogramaTool">
         <DomainClassMoniker Name="Subprograma" />
       </ElementTool>
     </ToolboxTab>
