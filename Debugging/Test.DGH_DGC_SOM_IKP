@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aplicacionIPK xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c334c53c-6717-4394-91d4-ad9c485e35ac" xmlns="http://schemas.microsoft.com/dsltools/DGH_DGC_SOM_IKP">
+  <imagen>
+    <aplicacionIPKHasImagen Id="68ab5204-4236-4426-9edd-fb07ec9d9a89">
+      <imagen Id="26ecb614-8f47-40df-9c08-97639096197b">
+        <programa>
+          <imagenReferencesPrograma Id="6354bc0b-af7f-4a1a-a84b-7e16662cf087">
+            <programaMoniker Id="ec276c94-3bcb-4524-b20d-b7433dcf42b4" />
+          </imagenReferencesPrograma>
+        </programa>
+      </imagen>
+    </aplicacionIPKHasImagen>
+  </imagen>
+  <conjInstr>
+    <aplicacionIPKHasConjInstr Id="4a712f9a-6796-4b9f-b71c-d80d12807530">
+      <programa Id="ec276c94-3bcb-4524-b20d-b7433dcf42b4">
+        <instruccion>
+          <conjInstrHasInstruccion Id="2c1040ae-bdb9-44ab-a535-0ed4f6ea81d7">
+            <insApuntar Id="e1e91c55-f89d-416c-a0a5-5df314c23a20">
+              <siguiente>
+                <instruccionReferencessiguiente Id="ecf3b513-5816-451e-933e-259fce90ba7b">
+                  <insRepetirMoniker Id="aaf03214-853f-48fb-b992-7d902fad65b0" />
+                </instruccionReferencessiguiente>
+              </siguiente>
+            </insApuntar>
+          </conjInstrHasInstruccion>
+          <conjInstrHasInstruccion Id="6c658347-b8e4-497b-968d-ae8fa2004c1a">
+            <insRepetir Id="aaf03214-853f-48fb-b992-7d902fad65b0">
+              <siguiente>
+                <instruccionReferencessiguiente Id="0f26993e-d248-41f4-9e30-8d4713ccd1fc">
+                  <insFijarMoniker Id="95d67f71-2e64-431d-80b3-a8ef7f20880e" />
+                </instruccionReferencessiguiente>
+              </siguiente>
+              <subprograma>
+                <insRepetirReferencesSubprograma Id="2a9802d7-9ab4-4e96-b59d-c94eee026e56">
+                  <subprogramaMoniker Id="4f52c9d5-a98f-4873-b2ca-a73c1ab85052" />
+                </insRepetirReferencesSubprograma>
+              </subprograma>
+            </insRepetir>
+          </conjInstrHasInstruccion>
+          <conjInstrHasInstruccion Id="c0d95df6-380e-4ee9-ab35-a7d1c33131e8">
+            <insFijar Id="95d67f71-2e64-431d-80b3-a8ef7f20880e" />
+          </conjInstrHasInstruccion>
+        </instruccion>
+        <instruccionInicial>
+          <programaReferencesInstruccionInicial Id="3ecfa28f-3f62-46a5-8314-09539a0e34f4">
+            <insApuntarMoniker Id="e1e91c55-f89d-416c-a0a5-5df314c23a20" />
+          </programaReferencesInstruccionInicial>
+        </instruccionInicial>
+        <instruccionFinal>
+          <programaReferencesInstruccionFinal Id="cb42c3cd-dc76-41a9-b171-f7d3b2a5d41b">
+            <insFijarMoniker Id="95d67f71-2e64-431d-80b3-a8ef7f20880e" />
+          </programaReferencesInstruccionFinal>
+        </instruccionFinal>
+      </programa>
+    </aplicacionIPKHasConjInstr>
+    <aplicacionIPKHasConjInstr Id="ada6bef7-99c8-434b-a42a-87989098eca4">
+      <subprograma Id="4f52c9d5-a98f-4873-b2ca-a73c1ab85052">
+        <instruccion>
+          <conjInstrHasInstruccion Id="8897df8b-a144-4d92-a010-02a6f9d303f8">
+            <insMover Id="94975981-e515-428c-a58b-5f72d84348eb" />
+          </conjInstrHasInstruccion>
+        </instruccion>
+        <instruccionInicial>
+          <programaReferencesInstruccionInicial Id="f55c86cc-d268-4046-9360-e1cb0b36cf70">
+            <insMoverMoniker Id="94975981-e515-428c-a58b-5f72d84348eb" />
+          </programaReferencesInstruccionInicial>
+        </instruccionInicial>
+        <instruccionFinal>
+          <programaReferencesInstruccionFinal Id="69e15236-d831-40aa-a3c0-e9d8434667ba">
+            <insMoverMoniker Id="94975981-e515-428c-a58b-5f72d84348eb" />
+          </programaReferencesInstruccionFinal>
+        </instruccionFinal>
+      </subprograma>
+    </aplicacionIPKHasConjInstr>
+  </conjInstr>
+</aplicacionIPK>

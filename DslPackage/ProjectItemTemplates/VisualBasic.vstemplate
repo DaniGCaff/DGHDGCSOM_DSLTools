@@ -1,0 +1,16 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{b6eee23c-71e3-44f4-9fbe-921f798446cf}" ID="103"/>
+		<Description Package="{b6eee23c-71e3-44f4-9fbe-921f798446cf}" ID="102"/>
+		<Icon Package="{b6eee23c-71e3-44f4-9fbe-921f798446cf}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKP</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.DGH_DGC_SOM_IKP">DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKP</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.DGH_DGC_SOM_IKP.diagram">DGH_DGC_SOM_IKP.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

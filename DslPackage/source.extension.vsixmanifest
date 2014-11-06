@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="b6eee23c-71e3-44f4-9fbe-921f798446cf">
+    <Name>DGH_DGC_SOM_IKP</Name>
+    <Author>CE</Author>
+    <Version>1.0.0.0</Version>
+    <Description>Description for CE.DGH_DGC_SOM_IKP.DGH_DGC_SOM_IKP</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl></MoreInfoUrl>
+    <GettingStartedGuide></GettingStartedGuide>
+    <Icon></Icon>
+    <PreviewImage></PreviewImage>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References/>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+    <MefComponent>|Dsl|</MefComponent>
+    <MefComponent>|%CurrentProject%|</MefComponent>
+    <ItemTemplate>ItemTemplates</ItemTemplate>
+  </Content>
+</Vsix>
